@@ -1,0 +1,95 @@
+/* ============================================================
+   Dra. Isabella Graça Câmara, hematologista (CRM-MG 73.571, RQE 71.765)
+   Identidade visual "Sálvia", versão 1, 09/11/2026
+
+   Função: fonte única das cores, tipos, formas e espaços da marca.
+   Base: direção B (Sálvia) de exploracoes/direcoes-marca.html, recomendada pelo agente de marca
+   e ainda sem crivo do Felipe nem da Isabella. Ideia: um mundo verde calmo com UMA gota de vermelho,
+   o único sinal de sangue. O mercado de hematologia é vinho, rosa e vermelho: aqui o vermelho é raro.
+   Regras de uso: manual-marca.html e guia-marca-isabella.md.
+
+   Importe por caminho, nunca copie os valores:
+       <link rel="stylesheet" href=".../marca-isabella/tokens.css">
+
+   Gabarito: python3 _shared/tools/gabarito_marca.py tokens.css manual-marca.html
+   ============================================================ */
+
+:root{
+  /* ---------- superfície ---------- */
+  --isabella-paper:     #F2F5EE;   /* branco-sálvia, fundo de toda página */
+  --isabella-paper-2:   #E5EBDF;   /* dobra verde-clara, segunda superfície */
+  --isabella-surface:   #FBFCF8;   /* cartão e campo sobre o fundo */
+  --isabella-hair:      #C9D2C2;   /* linha fina, só ornamento: nunca delimita controle */
+  --isabella-hair-forte:#74846F;   /* borda de controle: 3.62:1 sobre o fundo, 3.87:1 sobre o cartão, 3.28:1 sobre a dobra */
+
+  /* ---------- tinta ---------- */
+  --isabella-ink:       #142F28;   /* verde-floresta quase preto, texto: 13.00:1 sobre o fundo */
+  --isabella-ink-2:     #3C5149;   /* texto secundário: 7.74:1 sobre o fundo, 7.01:1 sobre a dobra */
+  --isabella-ink-3:     #52655D;   /* rótulo e legenda: 5.65:1 sobre o fundo, 5.12:1 sobre a dobra */
+
+  /* ---------- ação: verde-mata ---------- */
+  --isabella-accent:       #1F5B47;   /* botão, link, tudo que é clicável: 7.21:1 sobre o fundo */
+  --isabella-accent-deep:  #184A39;   /* hover do botão */
+  --isabella-on-accent:    #F8FBF4;   /* texto do botão: 7.60:1 sobre o verde-mata, 9.67:1 no hover */
+
+  /* ---------- a gota: o único vermelho ----------
+     Vermelho nunca é botão, fundo de faixa nem borda. Só a gota do símbolo, um sublinhado ou um
+     numeral. Sobre o fundo claro, texto vermelho usa a versão funda. */
+  --isabella-gota:        #C4412B;   /* a gota, só preenchimento: 4.61:1 sobre o fundo */
+  --isabella-gota-texto:  #A8341F;   /* vermelho que se lê: 6.00:1 sobre o fundo, 5.44:1 sobre a dobra */
+  --isabella-gota-claro:  #F0866C;   /* a gota sobre o verde escuro: 4.95:1 */
+
+  /* ---------- faixas de cor do site ----------
+     Ritmo: fundo, dobra verde-clara, rosado e verde escuro se alternam, vizinhos nunca iguais.
+     O verde escuro ocupa até 2 faixas por página. */
+  --isabella-blush:     #F6E3DA;   /* faixa rosada, quente como a pele da foto: 11.53:1 com a tinta */
+  --isabella-rosa:      #E9BFB0;   /* rosa firme, preenchimento: 8.55:1 com a tinta. Nunca texto lido */
+  --isabella-forest:    #173A30;   /* verde escuro, fundo de faixa, de assinatura e de cartão */
+  --isabella-on-forest:   #F2F5EE; /* texto sobre o verde escuro: 11.32:1 */
+  --isabella-on-forest-2: #D3DFD4; /* texto secundário sobre o verde escuro: 9.07:1 */
+  --isabella-forest-line: #9DB5A2; /* linha sobre o verde escuro, só ornamento: 5.68:1 */
+
+  /* ---------- semântico ----------
+     Faz e não faz. A cor nunca vem sozinha: o rótulo escrito também diz. */
+  --isabella-ok:        #2F6641;   /* 6.58:1 sobre o cartão */
+  --isabella-erro:      #A03A34;   /* 6.47:1 sobre o cartão */
+
+  /* ---------- tipografia ----------
+     Newsreader (títulos e a frase do cartão) e Hanken Grotesk (texto, descritor, botão).
+     As duas são Google Fonts em OFL, arquivos em assets/fonts/. */
+  --isabella-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --isabella-body:    'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Escala em rem. Público também de 50+: o corpo é 19px e o piso de qualquer texto lido é 15px.
+     max(Npx, Mrem): o rem acompanha a fonte que a pessoa configurou, o px é o piso. */
+  --isabella-t-display: clamp(2.5rem, 1.2rem + 5.4vw, 4.25rem);
+  --isabella-t-h2:      clamp(1.875rem, 1.2rem + 2.6vw, 2.75rem);
+  --isabella-t-h3:      max(23px, 1.4375rem);
+  --isabella-t-lede:    max(21px, 1.3125rem);
+  --isabella-t-corpo:   max(19px, 1.1875rem);
+  --isabella-t-legenda: max(16px, 1rem);
+  --isabella-t-rotulo:  max(15px, .9375rem);
+  --isabella-lh-display: 1.04;
+  --isabella-lh-corpo:   1.6;
+  --isabella-lh-legenda: 1.55;
+  --isabella-medida:     62ch;    /* largura máxima de parágrafo */
+
+  /* ---------- espaço ----------
+     A hierarquia desta marca vem do tamanho e do ar em volta, não do peso. */
+  --isabella-e-1:  8px;    /* rótulo colado no que ele nomeia */
+  --isabella-e-2: 14px;    /* entre linhas do mesmo grupo */
+  --isabella-e-3: 24px;    /* entre parágrafos */
+  --isabella-e-4: 40px;    /* entre grupos dentro de um bloco */
+  --isabella-e-5: 64px;    /* entre blocos */
+  --isabella-e-6: clamp(72px, 8vw, 120px);   /* entre seções */
+  --isabella-toque: 48px;  /* alvo mínimo de toque */
+
+  /* ---------- forma ---------- */
+  --isabella-r-cartao: 20px;
+  --isabella-r-campo:  12px;
+  --isabella-r-btn:    999px;
+  --isabella-sombra:   0 1px 2px rgba(20,47,40,.08), 0 12px 32px -12px rgba(20,47,40,.22);
+
+  /* ---------- movimento ---------- */
+  --isabella-ease: cubic-bezier(.22,1,.36,1);   /* saída exponencial */
+}
