@@ -10,7 +10,7 @@ Data: 2026-11-09. Preview noindex (fcamara1109/isabella-lp). Gerado por marketin
 Marca: external/doctors/isabella/wiki/concepts/marca-isabella (direção B, Sálvia). assets/tokens.css, fontes (subset latin em woff), favicon, og e símbolo são cópias de deploy: o master mora na pasta da marca.
 Ícones: Lucide (licença ISC), embutidos como SVG.
 -->
-<meta name="description" content="Dra. Isabella Graça Câmara, hematologista em Montes Claros. Consulta de uma hora, presencial, na Clínica Gastrus. Marcação pelo WhatsApp.">
+<meta name="description" content="Dra. Isabella Graça Câmara, hematologista em Montes Claros, com residência na UFMG. Consulta de uma hora, às quartas, na Clínica Gastrus. Agende pelo WhatsApp.">
 <meta name="theme-color" content="#F2F5EE">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -20,7 +20,7 @@ Marca: external/doctors/isabella/wiki/concepts/marca-isabella (direção B, Sál
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Isabella Graça Câmara">
 <meta property="og:title" content="Hematologista em Montes Claros: Dra. Isabella Graça Câmara">
-<meta property="og:description" content="Ferro baixo, trombose, gestação: uma hora para olhar o seu sangue. Clínica Gastrus, às quartas.">
+<meta property="og:description" content="Ferro baixo, trombose, gestação, hemograma alterado. Hematologista com residência na UFMG, consulta de uma hora em Montes Claros.">
 <meta property="og:image" content="https://fcamara1109.github.io/isabella-lp/assets/og-1200x630.png">
 <link rel="stylesheet" href="assets/tokens.css">
 <style>
@@ -64,14 +64,15 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 /* primeira dobra: queixa + hora, quem atende, formação, botão */
 .hero{padding-block:28px 40px;position:relative}
 .hero-grid{display:grid;gap:40px}
-.hero h1{font-size:clamp(40px,calc(1.2rem + 5.4vw),64px);line-height:1.04}
+.hero h1{font-size:clamp(32px,calc(1rem + 3.2vw),52px);line-height:1.08}
 .mt{white-space:nowrap;background:linear-gradient(transparent 64%,var(--isabella-rosa) 64% 94%,transparent 94%);padding-inline:.06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+@media (max-width:460px){.mt{white-space:normal}}  /* o destaque do h1 novo (residencia na UFMG) passa de 350px em 390 e estourava a pagina */
 .hero-sub{margin-top:20px;font-size:1.3125rem;line-height:1.5;color:var(--isabella-ink-2)}
 .hero-formacao{display:flex;gap:12px;align-items:flex-start;margin-top:20px;font-size:1.0625rem;line-height:1.5;color:var(--isabella-ink);max-width:46ch}
 .hero-formacao .i{color:var(--isabella-accent);margin-top:2px}
 .hero-acao{margin-top:28px}
-.hero-fine{margin-top:16px;font-size:.9375rem;line-height:1.55;color:var(--isabella-ink-3)}
-.hero-fine span{display:block}
+.hero-id{margin-top:16px;font-size:.9375rem;line-height:1.55;color:var(--isabella-ink-3)}
+.hero-fine{margin-top:4px;font-size:.9375rem;line-height:1.55;color:var(--isabella-ink-3)}
 .arco{position:relative;width:min(78%,300px);margin-inline:auto;aspect-ratio:4/5}
 .arco::before{content:"";position:absolute;inset:0;border:1.5px solid var(--isabella-hair-forte);border-radius:999px 999px 24px 24px;transform:translate(14px,14px);opacity:.45}
 .arco img{position:relative;width:100%;height:100%;object-fit:cover;border-radius:999px 999px 24px 24px;box-shadow:var(--isabella-sombra)}
@@ -173,11 +174,23 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 .fixo{position:fixed;z-index:30;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--isabella-paper);box-shadow:0 -1px 0 var(--isabella-hair),0 -12px 28px -16px rgba(20,47,40,.3)}
 .fixo .btn{width:100%}
 
+/* celular: retrato pequeno com o registro ao lado, antes do titulo (o rosto fica na primeira dobra) */
+@media (max-width:899px){
+  .hero{padding-block:20px 32px}
+  .hero-grid{grid-template-columns:112px minmax(0,1fr);gap:0 16px;align-items:center}
+  .hero .txt{display:contents}
+  .hero .txt>*{grid-column:1/-1}
+  .hero .arco{grid-column:1;grid-row:1;width:112px;margin:0}
+  .hero .arco::before{transform:translate(7px,7px)}
+  .hero .selo{display:none}
+  .hero .txt>.hero-id{grid-column:2;grid-row:1;margin:0}
+  .hero h1{margin-top:22px}
+}
 @media (min-width:640px){
   .barra ul{grid-template-columns:repeat(3,1fr)}
   .barra li{border-top:0;border-left:1px solid var(--isabella-hair);padding-left:28px;justify-content:flex-start}
   .barra li:first-child{border-left:0;padding-left:0}
-  .servicos .lista{grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px}
+  .servicos .lista{grid-template-columns:repeat(2,1fr);gap:40px 48px;margin-top:48px}
   .item{grid-template-columns:1fr;border:0;padding-block:0;border-top:1px solid var(--isabella-hair-forte);padding-top:28px}
   .item:last-child{border-bottom:0}
   .item .ic{grid-row:auto;margin-bottom:10px}
@@ -207,9 +220,6 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
   .final{padding-block:120px}
   .fixo{left:auto;right:28px;bottom:28px;padding:0;background:none;box-shadow:none}
   .fixo .btn{width:auto;box-shadow:0 0 0 3px var(--isabella-paper),0 14px 28px -10px rgba(20,47,40,.5)}
-}
-@media (min-width:1100px){
-  .hero h1{max-width:13ch}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -256,7 +266,7 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
   #wa-modal .avatar .on{position:absolute;right:1px;bottom:1px;width:13px;height:13px;border-radius:50%;background:var(--wa);border:2.5px solid var(--wa-head-b);}
   #wa-modal .who{display:flex;flex-direction:column;gap:2px;min-width:0;}
   #wa-modal .nm{font-family:var(--wa-head-font);font-weight:700;font-size:1.15rem;letter-spacing:-.01em;}
-  #wa-modal .cred{font-size:.72rem;font-weight:500;color:rgba(255,255,255,.92);line-height:1.35;}
+  #wa-modal .cred{display:block;margin:0;padding:0;border:0;font-size:.72rem;font-weight:500;color:rgba(255,255,255,.92);line-height:1.35;}  /* display/margin/padding/border: a LP pode ter .cred proprio (bloco de credenciais) e ele nao pode vazar pro modal */
   #wa-modal .online{display:flex;align-items:center;gap:.45rem;padding:.55rem 1.25rem;background:var(--wa-band);font-size:.74rem;font-weight:600;color:var(--wa-head-b);}
   #wa-modal .online .dot{width:7px;height:7px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 3px rgba(37,211,102,.25);}
   #wa-modal .wbody{padding:1.2rem 1.25rem 1.4rem;}
@@ -344,6 +354,19 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 /* widget:fim */
 </style>
 <noscript><style>button[data-wa]{display:none!important}.fixo a.btn{display:inline-flex}</style></noscript>
+<style>
+/* so esconde depois que o script confirma que roda (html.rv) */
+.rv [data-rv]:not(.in){opacity:0;transform:translateY(18px)}
+.rv [data-rv]{transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv [data-rv].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv [data-rv]:not(.in){opacity:1;transform:none}.rv [data-rv]{transition:none}}
+@media print{.rv [data-rv]:not(.in){opacity:1;transform:none}}
+</style>
+<style>
+[data-sticky]{transition:transform .3s ease,visibility 0s}
+[data-sticky].sticky-off{transform:translateY(110%);visibility:hidden;transition:transform .3s ease,visibility 0s .3s}
+@media (prefers-reduced-motion:reduce){[data-sticky],[data-sticky].sticky-off{transition:none}}
+</style>
 </head>
 <body>
 
@@ -353,7 +376,7 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
       <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#142F28" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#C4412B"/></svg>
       <div><b>Isabella Graça Câmara</b><span>Médica hematologista · Montes Claros</span></div>
     </div>
-    <button class="btn" type="button" data-wa>Marcar consulta</button>
+    <button class="btn" type="button" data-wa>Agendar pelo WhatsApp</button>
   </div>
 </header>
 
@@ -361,14 +384,15 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 <section class="hero" data-bloco="hero">
   <div class="wrap hero-grid">
     <div class="txt">
-      <h1>Ferro baixo, trombose, gestação: <span class="mt">uma hora</span> para olhar o seu sangue.</h1>
-      <p class="hero-sub">Dra. Isabella Graça Câmara, médica hematologista em Montes Claros. Na consulta, ela olha a sua história e os seus exames.</p>
-      <p class="hero-formacao"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span>Residência em Hematologia na UFMG e em Clínica Médica no HUCF Unimontes.</span></p>
+      <h1>Ferro baixo, trombose, gestação, hemograma alterado: hematologista com <span class="mt">residência na UFMG</span>.</h1>
+      <p class="hero-sub">Dra. Isabella Graça Câmara atende às quartas, em Montes Claros, em consulta de uma hora. Plantonista do CTI da Santa Casa e ex-preceptora de residentes.</p>
+      <p class="hero-formacao"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span>Residência em Hematologia e Hemoterapia na UFMG (2024 a 2026) e em Clínica Médica no HUCF Unimontes (2018 a 2020).</span></p>
       <div class="hero-acao">
-        <button class="btn" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Marcar consulta particular pelo WhatsApp</button>
-        <noscript><a class="btn" href="https://wa.me/5538999865405?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20particular%20com%20a%20Dra.%20Isabella%20Gra%C3%A7a%20C%C3%A2mara%2C%20hematologista.">Marcar consulta particular pelo WhatsApp</a></noscript>
-        <p class="hero-fine"><span>Médica · CRM-MG 73.571 · RQE 71.765, Hematologia · Clínica Gastrus, Montes Claros</span><span>Homens também são atendidos.</span></p>
+        <button class="btn" type="button" data-wa data-sticky-alvo><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Agendar pelo WhatsApp</button>
+        <noscript><a class="btn" href="https://wa.me/5538999865405?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20particular%20com%20a%20Dra.%20Isabella%20Gra%C3%A7a%20C%C3%A2mara%2C%20hematologista.">Agendar pelo WhatsApp</a></noscript>
       </div>
+      <p class="hero-id">Médica · CRM-MG 73.571 · RQE 71.765, Hematologia · Clínica Gastrus, Montes Claros</p>
+      <p class="hero-fine">Homens também são atendidos.</p>
     </div>
     <figure class="arco">
       <img src="fotos/isabella-calma.jpg" alt="Dra. Isabella Graça Câmara, de cabelo ondulado castanho-claro e jaleco branco, sorrindo de leve" width="800" height="1000" fetchpriority="high">
@@ -379,32 +403,37 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
     <div class="wrap">
       <ul>
         <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Consulta de 1 hora</li>
-        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>Quartas, das 13h às 17h</li>
-        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Clínica Gastrus, Montes Claros</li>
+        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>Quartas, das 13h às 17h, na Gastrus</li>
+        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>2 RQE: Hematologia e Clínica Médica</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section class="sec servicos" data-bloco="servicos">
-  <div class="wrap">
-    <h2>Quando procurar a hematologista</h2>
-    <p class="intro">Três motivos pelos quais uma paciente chega à consulta.</p>
+  <div class="wrap" data-rv>
+    <h2>Quatro queixas, e o que a consulta faz com cada uma</h2>
+    <p class="intro">É por estes motivos que se marca hematologista. Em cada um, a consulta termina em exame pedido ou decisão tomada.</p>
     <div class="lista">
       <div class="item">
         <span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
         <h3>Meu exame de ferro veio baixo</h3>
-        <p>Ferritina é o estoque de ferro do corpo. Ferro baixo pode ter mais de uma causa. A consulta serve para procurar a sua.</p>
+        <p>Ferritina é o estoque de ferro do corpo. Quando cai, a pergunta é por onde o ferro sai ou por que não entra. A Dra. Isabella pede os exames que respondem isso e define como repor.</p>
       </div>
       <div class="item">
         <span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg></span>
-        <h3>Já tive trombose ou há casos na família</h3>
-        <p>Trombose é um coágulo dentro de um vaso sanguíneo. Trombofilia é a tendência a formar coágulos. Histórico seu ou da família merece uma conversa com hematologista.</p>
+        <h3>Já tive trombose, ou há casos na família</h3>
+        <p>Trombose é um coágulo dentro da veia. Depois dela, duas decisões: por quanto tempo usar anticoagulante e se vale investigar trombofilia, a tendência a formar coágulos. A consulta toma as duas.</p>
       </div>
       <div class="item">
         <span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></svg></span>
-        <h3>O sangue na gestação</h3>
-        <p>Na gestação, o corpo faz mais sangue e pede mais ferro. O pré-natal continua com o seu obstetra, e a consulta é sobre o sangue.</p>
+        <h3>Estou grávida, ou quero engravidar</h3>
+        <p>Na gestação, o corpo pede mais ferro. Quem já teve trombose, ou tem casos na família, precisa decidir antes se usa anticoagulante. O pré-natal segue com o seu obstetra; a consulta responde a parte do sangue.</p>
+      </div>
+      <div class="item">
+        <span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg></span>
+        <h3>Meu hemograma veio alterado</h3>
+        <p>Plaqueta baixa ou alta, glóbulos brancos fora da faixa, hemoglobina que não sobe. A Dra. Isabella compara com os exames anteriores e diz o que se repete, o que se investiga e o que só se acompanha.</p>
       </div>
     </div>
     <div class="urgencia" role="note">
@@ -412,31 +441,31 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
       <h3>Quando não esperar a consulta</h3>
       <p>Sangramento, falta de ar de repente, dor no peito, ou perna inchada e dolorida de um lado só: procure o pronto-atendimento ou ligue 192.</p>
     </div>
-    <div class="acao"><button class="btn" type="button" data-wa>Marcar pelo WhatsApp</button></div>
+    <div class="acao"><button class="btn" type="button" data-wa>Agendar pelo WhatsApp</button></div>
   </div>
 </section>
 
 <section class="porque" data-bloco="porque">
   <img class="marca-dagua" src="assets/simbolo-escuro.svg" alt="" aria-hidden="true" width="420" height="420">
-  <div class="wrap grid">
+  <div class="wrap grid" data-rv>
     <div class="txt">
       <h2>Por que uma hora</h2>
-      <p class="intro">A consulta dura uma hora para caber três coisas: a sua história, os seus exames e as suas perguntas.</p>
+      <p class="intro">Exame de sangue se lê em série, com a história de quem fez ao lado. Numa consulta curta, isso não cabe.</p>
       <div class="passos">
         <div class="passo">
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
-          <h3>A sua história</h3>
-          <p>O que você conta é o ponto de partida. A Dra. Isabella olha a sua história inteira, no seu tempo.</p>
+          <h3>Os exames anteriores</h3>
+          <p>Traga os hemogramas e as ferritinas antigos. A tendência entre eles diz mais que o último resultado sozinho.</p>
         </div>
         <div class="passo">
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-          <h3>Os seus exames</h3>
-          <p>Hemograma, ferritina, o que você tiver. Ela lê os resultados junto com a sua história.</p>
+          <h3>A história completa</h3>
+          <p>Menstruação, gestações, cirurgias, remédios em uso, casos de trombose na família. É o que orienta o pedido de exame.</p>
         </div>
         <div class="passo">
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-          <h3>As suas perguntas</h3>
-          <p>A hora também é sua: você pergunta o que quiser.</p>
+          <h3>O próximo passo definido</h3>
+          <p>Você sai com os exames pedidos ou com a conduta escrita, e sabe quando volta.</p>
         </div>
       </div>
     </div>
@@ -447,28 +476,28 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 </section>
 
 <section class="prova" data-bloco="prova">
-  <div class="wrap grid">
+  <div class="wrap grid" data-rv>
     <div class="txt">
-      <h2>Formação que se confere</h2>
-      <p class="intro">A Dra. Isabella ainda não tem avaliações públicas, então a prova é a formação e o registro, que você pode conferir.</p>
+      <h2>Formação e trajetória</h2>
+      <p class="intro">Antes da hematologia, a Dra. Isabella fez clínica médica e plantão de UTI. Por isso a consulta lê o sangue junto com o resto do corpo.</p>
       <ul class="cred">
         <li>
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>CRM-MG <span class="num">73.571</span></h3>
-          <p>Médica registrada no Conselho Regional de Medicina de Minas Gerais. Graduação em Medicina pela Unimontes, de 2011 a 2017.</p>
+          <h3>Hematologia na UFMG · RQE <span class="num">71.765</span></h3>
+          <p>Residência em Hematologia e Hemoterapia na Universidade Federal de Minas Gerais, de março de 2024 a fevereiro de 2026.</p>
         </li>
         <li>
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>RQE <span class="num">71.765</span>, Hematologia e Hemoterapia</h3>
-          <p>Residência em Hematologia e Hemoterapia na UFMG, de março de 2024 a fevereiro de 2026.</p>
+          <h3>Clínica Médica no HUCF · RQE <span class="num">71.766</span></h3>
+          <p>Residência em Clínica Médica no Hospital Universitário Clemente de Faria, da Unimontes, de março de 2018 a fevereiro de 2020. Graduação em Medicina pela Unimontes.</p>
         </li>
         <li>
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>RQE <span class="num">71.766</span>, Clínica Médica</h3>
-          <p>Residência em Clínica Médica no Hospital Universitário Clemente de Faria (HUCF), da Unimontes, de março de 2018 a fevereiro de 2020.</p>
+          <h3>UTI e preceptoria</h3>
+          <p>Plantonista do CTI Geral da Santa Casa de Montes Claros e, em 2020 e 2021, da UTI COVID do HUCF. Preceptora da residência de Clínica Médica na Santa Casa (2021 a 2024) e no HUCF (2022 a 2024).</p>
         </li>
       </ul>
-      <p class="nota">O CRM e os RQE podem ser conferidos no conselho de medicina.</p>
+      <p class="nota">Médica, CRM-MG 73.571. O CRM e os dois RQE se conferem no site do Conselho Regional de Medicina de Minas Gerais.</p>
     </div>
     <figure class="arco">
       <img src="fotos/isabella-inclinada.jpg" alt="Dra. Isabella Graça Câmara de jaleco branco, com a cabeça levemente inclinada" width="800" height="1000" loading="lazy">
@@ -477,14 +506,14 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 </section>
 
 <section class="sec faq" data-bloco="faq">
-  <div class="wrap grid">
+  <div class="wrap grid" data-rv>
     <div class="cab">
       <h2>Perguntas e respostas</h2>
-      <div class="acao"><button class="btn btn--fino" type="button" data-wa>Marcar pelo WhatsApp</button></div>
+      <div class="acao"><button class="btn btn--fino" type="button" data-wa>Agendar pelo WhatsApp</button></div>
     </div>
     <div class="perguntas">
-      <details name="faq"><summary>Quanto dura a consulta, e como é?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Uma hora, presencial. A Dra. Isabella olha a sua história e os seus exames, e você pergunta o que quiser.</p></details>
-      <details name="faq"><summary>Preciso levar exames?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Leve os exames que tiver, impressos ou no celular.</p></details>
+      <details name="faq"><summary>Quanto dura a consulta, e como é?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Uma hora, presencial. A Dra. Isabella revê a sua história e os exames que você trouxer, e sai dali o pedido de exame ou a conduta.</p></details>
+      <details name="faq"><summary>Preciso levar exames?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Leve todos os que tiver, inclusive os antigos, impressos ou no celular. A comparação entre eles pesa na decisão.</p></details>
       <details name="faq"><summary>Quando e onde a Dra. Isabella atende?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Às quartas, das 13h às 17h, na Clínica Gastrus, em Montes Claros.</p></details>
       <details name="faq"><summary>Ela atende homens?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Sim. A consulta de uma hora é a mesma para homens e mulheres.</p></details>
       <details name="faq"><summary>Quanto custa e como marco?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>A consulta é particular. O valor e os horários livres a recepção responde na conversa pelo WhatsApp, e é por lá que você marca.</p></details>
@@ -494,7 +523,7 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 </section>
 
 <section class="local" data-bloco="local">
-  <div class="wrap grid">
+  <div class="wrap grid" data-rv>
     <div class="txt">
       <h2>Onde é a consulta</h2>
       <p class="intro">A consulta é presencial e pontual: chegue uns minutinhos antes.</p>
@@ -511,11 +540,11 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 </section>
 
 <section class="final" data-bloco="cta-final">
-  <div class="wrap">
+  <div class="wrap" data-rv>
     <svg class="simbolo" viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#F2F5EE" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#F0866C"/></svg>
-    <h2>Para marcar, mande uma mensagem</h2>
-    <p>A recepção da Clínica Gastrus responde pelo WhatsApp.</p>
-    <button class="btn btn--claro" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Marcar consulta particular pelo WhatsApp</button>
+    <h2>Exame alterado parado na gaveta não responde nada</h2>
+    <p>Mande uma mensagem: a recepção da Clínica Gastrus responde pelo WhatsApp com os horários de quarta à tarde.</p>
+    <button class="btn btn--claro" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Agendar pelo WhatsApp</button>
   </div>
 </section>
 </main>
@@ -532,9 +561,9 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
   </div>
 </footer>
 
-<div class="fixo" data-bloco="cta-flutuante">
-  <button class="btn" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Marcar pelo WhatsApp</button>
-  <noscript><a class="btn" style="display:none" href="https://wa.me/5538999865405?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20particular%20com%20a%20Dra.%20Isabella%20Gra%C3%A7a%20C%C3%A2mara%2C%20hematologista.">Marcar pelo WhatsApp</a></noscript>
+<div class="fixo" data-bloco="cta-flutuante" data-sticky>
+  <button class="btn" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Agendar pelo WhatsApp</button>
+  <noscript><a class="btn" style="display:none" href="https://wa.me/5538999865405?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20particular%20com%20a%20Dra.%20Isabella%20Gra%C3%A7a%20C%C3%A2mara%2C%20hematologista.">Agendar pelo WhatsApp</a></noscript>
 </div>
 
 <script>
@@ -578,7 +607,7 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
       </div>
       <div class="online"><span class="dot"></span>Atendimento na Clínica Gastrus, Montes Claros</div>
       <div class="wbody">
-        <div class="lead-line">Marcar consulta</div>
+        <div class="lead-line">Agendar consulta</div>
         <label class="field">
           <span class="lbl">Seu WhatsApp</span>
           <input id="wa-phone" type="tel" inputmode="tel" placeholder="(00) 0 0000-0000" autocomplete="tel" data-1p-ignore data-lpignore="true" aria-describedby="wa-dica" data-wa-err="Digite seu WhatsApp com DDD, por exemplo 38 90000-0000.">
@@ -653,6 +682,25 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
   document.getElementById('wa-last-step').addEventListener('click', function(){
     window.open(WA, '_blank');
   });
+})();
+</script>
+<script>
+(function(){
+  var els = document.querySelectorAll('[data-rv]');
+  if(!els.length || !('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var h = document.documentElement;
+  h.classList.add('rv');
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+  /* impressao: mostra tudo */
+  window.addEventListener('beforeprint', function(){ els.forEach(function(e){ e.classList.add('in'); }); });
+})();
+</script>
+<script>
+(function(){
+  var s=document.querySelector('[data-sticky]'), b=document.querySelector('[data-sticky-alvo]');
+  if(!s||!b||!('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(e){ s.classList.toggle('sticky-off', e[0].isIntersecting); }, {threshold:.6}).observe(b);
 })();
 </script>
 </body>
