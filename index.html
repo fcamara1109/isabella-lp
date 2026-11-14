@@ -3,14 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hematologista em Montes Claros | Isabella Graça Câmara</title>
+<title>Hematologista em Montes Claros | Dra. Isabella Graça Câmara</title>
 <!--
-Função: site da Dra. Isabella Graça Câmara (hematologista, Montes Claros), página única na espinha do blueprint de LP de médico, mais o widget de WhatsApp canônico.
-Data: 2026-11-09. Preview noindex (fcamara1109/isabella-lp). Gerado por marketing-agency/sites/_shared/monta_site.py: o texto mora em copy.md (um bloco ## chave por pedaço), nunca se edita o index.html.
-Marca: external/doctors/isabella/wiki/concepts/marca-isabella (direção B, Sálvia). assets/tokens.css, fontes (subset latin em woff), favicon, og e símbolo são cópias de deploy: o master mora na pasta da marca.
+Função: v2 da LP da Dra. Isabella Graça Câmara (hematologista, Montes Claros), para comparar com a v1. Cada bloco derruba uma objeção da tabela O/CO do guia de marca (mapa no README desta pasta).
+Data: 2026-11-14. Não publicada. Gerado por marketing-agency/sites/_shared/monta_site.py: o texto mora em copy.md, nunca se edita o index.html.
+Marca: external/doctors/isabella/wiki/concepts/marca-isabella (direção B, Sálvia). assets/ são cópias de deploy.
 Ícones: Lucide (licença ISC), embutidos como SVG.
+Escala de tipo (px): 15 rótulo · 17 apoio · 19 corpo · 21 lead · 23 h3 · 26 placa · 28 a 46 h2 · 31 a 58 h1.
+Respiro: e-1 8 · e-2 14 · e-3 24 · e-4 40 · e-5 64 · seções variam de 56 a 128 conforme o peso do assunto.
 -->
-<meta name="description" content="Dra. Isabella Graça Câmara, hematologista em Montes Claros, com residência na UFMG. Consulta de uma hora, às quartas, na Clínica Gastrus. Agende pelo WhatsApp.">
+<meta name="description" content="Dra. Isabella Graça Câmara, hematologista em Montes Claros. Ferritina, hemograma, trombose e gestação, em consulta de uma hora na Clínica Gastrus.">
 <meta name="theme-color" content="#F2F5EE">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -19,152 +21,178 @@ Marca: external/doctors/isabella/wiki/concepts/marca-isabella (direção B, Sál
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Isabella Graça Câmara">
-<meta property="og:title" content="Hematologista em Montes Claros: Dra. Isabella Graça Câmara">
-<meta property="og:description" content="Ferro baixo, trombose, gestação, hemograma alterado. Hematologista com residência na UFMG, consulta de uma hora em Montes Claros.">
+<meta property="og:title" content="Dra. Isabella Graça Câmara, hematologista em Montes Claros">
+<meta property="og:description" content="Ferritina alterada no exame? Consulta de uma hora, às quartas, na Clínica Gastrus.">
 <meta property="og:image" content="https://fcamara1109.github.io/isabella-lp/assets/og-1200x630.png">
+<link rel="preload" href="assets/fonts/Newsreader.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="assets/tokens.css">
 <style>
 @font-face{font-family:'Newsreader';src:url(assets/fonts/Newsreader.woff) format('woff');font-weight:200 800;font-style:normal;font-display:swap}
 @font-face{font-family:'Hanken Grotesk';src:url(assets/fonts/HankenGrotesk.woff) format('woff');font-weight:100 900;font-style:normal;font-display:swap}
 
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scrollbar-color:var(--isabella-hair-forte) var(--isabella-paper)}
 body{margin:0;background:var(--isabella-paper);color:var(--isabella-ink);font-family:var(--isabella-body);font-size:1.1875rem;line-height:1.6;font-weight:400;padding-bottom:calc(84px + env(safe-area-inset-bottom));caret-color:var(--isabella-accent);overflow-x:hidden}
 img,svg{display:block;max-width:100%}
 h1,h2,h3,p,ul,ol,figure,dl,dd{margin:0}
 ul,ol{padding:0;list-style:none}
 ::selection{background:var(--isabella-rosa);color:var(--isabella-ink)}
 :focus-visible{outline:2px solid var(--isabella-ink);outline-offset:3px;border-radius:6px}
-html{scrollbar-color:var(--isabella-hair-forte) var(--isabella-paper)}
 p{text-wrap:pretty;max-width:62ch}
 h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;letter-spacing:-.005em;font-optical-sizing:auto}
+a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thickness:1px;transition:color .2s ease,text-decoration-color .2s ease}
 
 .wrap{width:min(100% - 40px,1120px);margin-inline:auto}
 .i{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 .wa{width:22px;height:22px;flex:none;fill:currentColor}
 
-/* botão: um só desenho, em duas superfícies */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.65rem;min-height:56px;padding:0 28px;border:0;border-radius:999px;background:var(--isabella-accent);color:var(--isabella-on-accent);font-family:var(--isabella-body);font-size:1.0625rem;font-weight:600;line-height:1.2;letter-spacing:.005em;text-decoration:none;cursor:pointer;box-shadow:0 1px 2px rgba(20,47,40,.2),0 12px 24px -12px rgba(31,91,71,.6);transition:background .2s ease,transform .25s var(--isabella-ease),box-shadow .25s var(--isabella-ease)}
+/* botão: um só desenho, em três superfícies */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.65rem;min-height:56px;padding:0 28px;border:0;border-radius:999px;background:var(--isabella-accent);color:var(--isabella-on-accent);font-family:var(--isabella-body);font-size:1.0625rem;font-weight:600;line-height:1.2;letter-spacing:.005em;text-decoration:none;cursor:pointer;box-shadow:0 1px 2px rgba(20,47,40,.2),0 12px 24px -12px rgba(31,91,71,.6);transition:background .2s ease,color .2s ease,transform .25s var(--isabella-ease),box-shadow .25s var(--isabella-ease)}
 .btn:hover{background:var(--isabella-accent-deep);transform:translateY(-1px);box-shadow:0 1px 2px rgba(20,47,40,.2),0 16px 28px -12px rgba(31,91,71,.7)}
-.btn:active{transform:translateY(0)}
+.btn:active{transform:translateY(0);transition-duration:.1s}
 .btn--claro{background:var(--isabella-paper);color:var(--isabella-ink)}
-.btn--claro:hover{background:var(--isabella-surface)}
+.btn--claro:hover{background:var(--isabella-surface);color:var(--isabella-ink)}
 .btn--fino{background:transparent;color:var(--isabella-accent);box-shadow:inset 0 0 0 1.5px var(--isabella-accent);min-height:48px;padding:0 22px}
-.btn--fino:hover{background:var(--isabella-accent);color:var(--isabella-on-accent)}
+.btn--fino:hover{background:var(--isabella-accent);color:var(--isabella-on-accent);box-shadow:inset 0 0 0 1.5px var(--isabella-accent)}
 
 /* topo: fixo do molde. símbolo + nome + especialidade com a cidade, CTA à direita */
-.topo{position:sticky;top:0;z-index:20;background:var(--isabella-paper);box-shadow:0 1px 0 var(--isabella-hair)}
-.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.topo{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--isabella-paper) 94%,transparent);box-shadow:0 1px 0 var(--isabella-hair)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
 .marca{display:flex;align-items:center;gap:12px;min-width:0}
-.marca svg{width:38px;height:38px;flex:none}
+.marca svg{width:36px;height:36px;flex:none}
 .marca b{display:block;font-family:var(--isabella-display);font-size:1.3125rem;font-weight:560;line-height:1.15;letter-spacing:-.005em}
 .marca span{display:block;font-size:.9375rem;line-height:1.3;color:var(--isabella-ink-2)}
 .topo .btn{display:none;min-height:48px;padding:0 22px}
 
-/* primeira dobra: queixa + hora, quem atende, formação, botão */
-.hero{padding-block:28px 40px;position:relative}
+/* ---------- primeira dobra: registro e chips, a ponte, o botão ---------- */
+.hero{padding-block:24px 0;position:relative;background:radial-gradient(120% 70% at 85% 0%,var(--isabella-paper-2) 0%,transparent 60%)}
 .hero-grid{display:grid;gap:40px}
-.hero h1{font-size:clamp(32px,calc(1rem + 3.2vw),52px);line-height:1.08}
-.mt{white-space:nowrap;background:linear-gradient(transparent 64%,var(--isabella-rosa) 64% 94%,transparent 94%);padding-inline:.06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-@media (max-width:460px){.mt{white-space:normal}}  /* o destaque do h1 novo (residencia na UFMG) passa de 350px em 390 e estourava a pagina */
-.hero-sub{margin-top:20px;font-size:1.3125rem;line-height:1.5;color:var(--isabella-ink-2)}
-.hero-formacao{display:flex;gap:12px;align-items:flex-start;margin-top:20px;font-size:1.0625rem;line-height:1.5;color:var(--isabella-ink);max-width:46ch}
-.hero-formacao .i{color:var(--isabella-accent);margin-top:2px}
-.hero-acao{margin-top:28px}
-.hero-id{margin-top:16px;font-size:.9375rem;line-height:1.55;color:var(--isabella-ink-3)}
-.hero-fine{margin-top:4px;font-size:.9375rem;line-height:1.55;color:var(--isabella-ink-3)}
+.hero-id{font-size:.9375rem;line-height:1.45;color:var(--isabella-ink-3);letter-spacing:.01em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:4px 14px 4px 10px;border-radius:999px;background:var(--isabella-surface);box-shadow:inset 0 0 0 1px var(--isabella-hair);font-size:.9375rem;font-weight:500;line-height:1.25;color:var(--isabella-ink)}
+.chip .i{width:18px;height:18px;color:var(--isabella-accent)}
+.hero h1{font-size:clamp(31px,calc(.9rem + 3.6vw),58px);line-height:1.08;letter-spacing:-.012em}
+.mt{background:linear-gradient(transparent 62%,var(--isabella-rosa) 62% 92%,transparent 92%);padding-inline:.04em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hero-sub{font-size:1.3125rem;line-height:1.5;color:var(--isabella-ink-2);max-width:40ch}
+.hero-acao{display:grid;justify-items:start;gap:10px}
+.micro{font-size:1.0625rem;line-height:1.45;color:var(--isabella-ink-2)}
+.hero-fine{font-size:.9375rem;line-height:1.5;color:var(--isabella-ink-3)}
 .arco{position:relative;width:min(78%,300px);margin-inline:auto;aspect-ratio:4/5}
 .arco::before{content:"";position:absolute;inset:0;border:1.5px solid var(--isabella-hair-forte);border-radius:999px 999px 24px 24px;transform:translate(14px,14px);opacity:.45}
 .arco img{position:relative;width:100%;height:100%;object-fit:cover;border-radius:999px 999px 24px 24px;box-shadow:var(--isabella-sombra)}
-.hero .arco img{animation:revela 1s var(--isabella-ease) .1s both}
-.selo{position:absolute;left:-14px;bottom:28px;display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--isabella-surface);box-shadow:var(--isabella-sombra)}
+.hero .arco img{animation:revela 1.1s var(--isabella-ease) .1s both}
+.selo{position:absolute;left:-14px;bottom:28px;display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--isabella-surface);box-shadow:var(--isabella-sombra);animation:pinga .9s var(--isabella-ease) .7s both}
 .selo svg{width:38px;height:38px}
-@keyframes revela{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes revela{from{clip-path:inset(100% 0 0 0 round 999px 999px 24px 24px)}to{clip-path:inset(0 0 0 0 round 999px 999px 24px 24px)}}
+@keyframes pinga{from{opacity:0;transform:translateY(-14px) scale(.9)}to{opacity:1;transform:none}}
 
-/* barra: três respostas de quem decide marcar (quanto dura, quando, onde) */
-.barra{margin-top:48px}
-.barra .wrap{border-top:1px solid var(--isabella-hair-forte);padding-block:8px 0}
+/* barra: três respostas de quem decide marcar */
+.barra{margin-top:40px;background:var(--isabella-surface);box-shadow:0 -1px 0 var(--isabella-hair),0 1px 0 var(--isabella-hair)}
 .barra ul{display:grid}
-.barra li{display:flex;align-items:center;gap:14px;min-height:64px;font-size:1.1875rem;font-weight:500;line-height:1.35;border-top:1px solid var(--isabella-hair)}
+.barra li{display:flex;align-items:center;gap:14px;min-height:60px;font-size:1.0625rem;font-weight:500;line-height:1.35;border-top:1px solid var(--isabella-hair)}
 .barra li:first-child{border-top:0}
-.barra .i{width:28px;height:28px;color:var(--isabella-accent)}
+.barra .i{width:26px;height:26px;color:var(--isabella-accent)}
 
-.sec{padding-block:72px}
-.sec h2{font-size:clamp(34px,calc(1.2rem + 2.6vw),44px);line-height:1.1}
-.sec .intro{margin-top:16px;font-size:1.3125rem;line-height:1.5;color:var(--isabella-ink-2)}
+/* seção: o título já é a resposta */
+.sec h2{font-size:clamp(28px,calc(1.1rem + 2.5vw),46px);line-height:1.1;letter-spacing:-.01em;max-width:22ch}
+.pq{display:block;margin-bottom:10px;font-style:italic;font-weight:500;font-size:1.4375rem;line-height:1.3;letter-spacing:0;color:var(--isabella-ink-3)}
+.porque .pq{color:var(--isabella-on-forest-2)}
+.final .pq{color:var(--isabella-on-forest-2)}
+.lead{margin-top:16px;font-size:1.3125rem;line-height:1.5;color:var(--isabella-ink-2)}
 
-/* servicos */
-.servicos{background:var(--isabella-paper-2)}
-.servicos .lista{display:grid;gap:0;margin-top:40px}
-.item{display:grid;align-content:start;grid-template-columns:56px 1fr;gap:4px 18px;padding-block:28px;border-top:1px solid var(--isabella-hair)}
+/* ---------- reframe: o medo de câncer, respondido cedo ---------- */
+.reframe{background:var(--isabella-blush);padding-block:56px}
+.reframe .grid{display:grid;gap:20px}
+.reframe .q{font-family:var(--isabella-display);font-style:italic;font-weight:500;font-size:clamp(28px,calc(1.1rem + 2.5vw),46px);line-height:1.12;letter-spacing:-.01em;color:var(--isabella-ink)}
+.reframe .q::before{content:"\201C";color:var(--isabella-gota-texto)}
+.reframe .q::after{content:"\201D";color:var(--isabella-gota-texto)}
+.reframe .resp{font-size:1.4375rem;line-height:1.4;font-family:var(--isabella-display);font-weight:560;color:var(--isabella-ink)}
+.reframe .txt p:not(.resp){margin-top:14px;font-size:1.1875rem;color:var(--isabella-ink-2)}
+
+/* ---------- servicos: as quatro queixas, na fala dela ---------- */
+.servicos{padding-block:72px}
+.servicos .lista{display:grid;margin-top:40px}
+.item{display:grid;align-content:start;grid-template-columns:52px 1fr;gap:4px 16px;padding-block:24px;border-top:1px solid var(--isabella-hair)}
 .item:last-child{border-bottom:1px solid var(--isabella-hair)}
-.item .ic{grid-row:span 2;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--isabella-paper);color:var(--isabella-accent)}
+.item .ic{grid-row:span 2;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--isabella-paper-2);color:var(--isabella-accent)}
 .item h3{font-size:1.4375rem;line-height:1.25}
 .item p{font-size:1.1875rem;color:var(--isabella-ink-2);margin-top:6px}
-.urgencia{display:grid;grid-template-columns:28px 1fr;gap:4px 14px;margin-top:40px;padding:22px 22px 24px;background:var(--isabella-surface);border:1px solid var(--isabella-hair-forte);border-radius:var(--isabella-r-cartao)}
+.urgencia{display:grid;grid-template-columns:28px 1fr;gap:4px 14px;margin-top:40px;padding:20px 22px 22px;background:var(--isabella-surface);border-radius:var(--isabella-r-cartao);box-shadow:inset 0 0 0 1px var(--isabella-hair-forte)}
 .urgencia .i{color:var(--isabella-gota-texto);width:28px;height:28px;grid-row:span 2}
-.urgencia h3{font-size:1.4375rem;line-height:1.25}
+.urgencia h3{font-family:var(--isabella-body);font-size:1.1875rem;font-weight:600;line-height:1.35}
 .urgencia p{font-size:1.0625rem;line-height:1.55;color:var(--isabella-ink-2)}
-.servicos .acao{margin-top:40px}
+.urgencia a{font-weight:600}
 
-/* porque: a hora, em faixa escura da marca */
+/* ---------- porque: a hora, em faixa escura ---------- */
 .porque{position:relative;overflow:hidden;background:var(--isabella-forest);color:var(--isabella-on-forest);padding-block:88px}
 .porque .marca-dagua{position:absolute;right:-90px;top:-70px;width:420px;height:420px;opacity:.07;pointer-events:none}
 .porque .txt,.porque .arco{position:relative}
 .porque h2{color:var(--isabella-on-forest)}
-.porque .intro{color:var(--isabella-on-forest-2)}
-.porque .passos{display:grid;gap:26px;margin-top:36px}
+.porque .lead{color:var(--isabella-on-forest-2)}
+.porque .passos{display:grid;gap:24px;margin-top:36px}
 .passo{display:grid;grid-template-columns:28px 1fr;gap:2px 16px}
 .passo .i{color:var(--isabella-gota-claro);width:28px;height:28px;grid-row:span 2;margin-top:3px}
 .passo h3{font-size:1.4375rem;line-height:1.25;color:var(--isabella-on-forest)}
-.passo p{font-size:1.1875rem;color:var(--isabella-on-forest-2)}
+.passo p{font-size:1.1875rem;line-height:1.62;color:var(--isabella-on-forest-2);letter-spacing:.005em}
 .porque .grid{display:grid;gap:48px}
 .porque .arco::before{border-color:var(--isabella-forest-line)}
 .porque .arco img{box-shadow:0 1px 2px rgba(0,0,0,.25),0 20px 40px -16px rgba(0,0,0,.5)}
 
-/* prova: sem avaliação pública, a prova é formação e registro */
-.prova{background:var(--isabella-blush);padding-block:80px}
-.prova .grid{display:grid;gap:48px}
-.cred{display:grid;gap:0;margin-top:36px}
-.cred li{display:grid;grid-template-columns:28px 1fr;gap:2px 16px;padding-block:22px;border-top:1px solid color-mix(in srgb,var(--isabella-ink) 18%,transparent)}
-.cred li:last-child{border-bottom:1px solid color-mix(in srgb,var(--isabella-ink) 18%,transparent)}
+/* ---------- prova: formação e registro, em paralelo ---------- */
+.prova{background:var(--isabella-paper-2);padding-block:72px}
+.prova .grid{display:grid;gap:44px}
+.cred{display:grid;gap:16px;margin-top:32px}
+.cred li{display:grid;align-content:start;grid-template-columns:28px 1fr;gap:4px 14px;padding:20px 20px 22px;background:var(--isabella-surface);border-radius:var(--isabella-r-cartao);box-shadow:var(--isabella-sombra)}
 .cred .i{color:var(--isabella-accent);width:28px;height:28px;grid-row:span 2;margin-top:2px}
 .cred h3{font-size:1.4375rem;line-height:1.25}
-.cred .num{color:var(--isabella-gota-texto)}
-.cred p{font-size:1.1875rem;color:var(--isabella-ink-2)}
-.prova .nota{margin-top:20px;font-size:1rem;line-height:1.55;color:var(--isabella-ink-2)}
+.cred .num{color:var(--isabella-gota-texto);font-variant-numeric:tabular-nums}
+.cred p{font-size:1.0625rem;line-height:1.55;color:var(--isabella-ink-2)}
+.prova .nota{margin-top:20px;font-size:1.0625rem;line-height:1.55;color:var(--isabella-ink-2)}
+.prova .arco{display:none}  /* celular: a foto do microscópio não derruba objeção e alonga a página; volta no desktop */
 
-/* faq */
-.faq .grid{display:grid;gap:32px}
-.faq details{border-top:1px solid var(--isabella-hair)}
-.faq details:last-of-type{border-bottom:1px solid var(--isabella-hair)}
-.faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding-block:14px;font-size:1.1875rem;font-weight:600;line-height:1.35;cursor:pointer;list-style:none;transition:color .2s ease}
+/* ---------- depois: o que acontece quando você escreve ---------- */
+.depois{padding-block:80px}
+.trilha{display:grid;gap:0;margin-top:40px;counter-reset:passo}
+.etapa{position:relative;display:grid;grid-template-columns:48px 1fr;gap:4px 18px;padding-bottom:32px}
+.etapa:last-child{padding-bottom:0}
+.etapa::before{counter-increment:passo;content:counter(passo);grid-row:span 2;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--isabella-surface);box-shadow:inset 0 0 0 1.5px var(--isabella-accent);font-family:var(--isabella-display);font-size:1.4375rem;font-weight:600;color:var(--isabella-accent);font-variant-numeric:tabular-nums}
+.etapa:not(:last-child)::after{content:"";position:absolute;left:23px;top:56px;bottom:8px;width:2px;background:linear-gradient(var(--isabella-hair-forte),var(--isabella-hair))}
+.etapa h3{font-size:1.4375rem;line-height:1.25;padding-top:8px}
+.etapa p{font-size:1.1875rem;color:var(--isabella-ink-2);margin-top:4px}
+.depois .acao{margin-top:40px}
+
+/* ---------- faq ---------- */
+.faq{background:var(--isabella-paper-2);padding-block:72px}
+.faq .grid{display:grid;gap:28px}
+.faq details{border-top:1px solid var(--isabella-hair-forte)}
+.faq details:last-of-type{border-bottom:1px solid var(--isabella-hair-forte)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding-block:14px;font-size:1.1875rem;font-weight:600;line-height:1.35;cursor:pointer;list-style:none;border-radius:6px;transition:color .2s ease}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary:hover{color:var(--isabella-accent)}
 .faq summary .i{color:var(--isabella-accent);transition:transform .3s var(--isabella-ease)}
 .faq details[open] summary .i{transform:rotate(180deg)}
 .faq details p{padding:0 40px 24px 0;font-size:1.1875rem;color:var(--isabella-ink-2)}
-.faq .acao{margin-top:36px}
+.faq .acao{margin-top:28px}
 
-/* local */
-.local{background:var(--isabella-paper-2);padding-block:80px}
-.local .grid{display:grid;gap:36px}
+/* ---------- local ---------- */
+.local{padding-block:64px}
+.local .grid{display:grid;gap:32px}
 .placa{padding:28px 26px 30px;background:var(--isabella-surface);border-radius:var(--isabella-r-cartao);box-shadow:var(--isabella-sombra)}
-.placa h3{font-size:1.75rem;line-height:1.2}
+.placa h3{font-size:1.625rem;line-height:1.2}
 .placa ul{display:grid;gap:14px;margin-top:20px}
 .placa li{display:flex;gap:14px;align-items:flex-start;font-size:1.1875rem;line-height:1.45}
 .placa .i{color:var(--isabella-accent);margin-top:1px}
 .placa .btn{margin-top:26px}
 
-/* chamada final */
+/* ---------- chamada final ---------- */
 .final{background:var(--isabella-forest);color:var(--isabella-on-forest);padding-block:96px;text-align:center}
 .final .simbolo{width:64px;height:64px;margin:0 auto 24px}
-.final h2{color:var(--isabella-on-forest);margin-inline:auto;max-width:18ch}
+.final h2{color:var(--isabella-on-forest);margin-inline:auto;max-width:20ch}
 .final p{margin:18px auto 0;font-size:1.3125rem;line-height:1.5;color:var(--isabella-on-forest-2)}
 .final .btn{margin-top:34px}
 
-/* rodapé */
-.rodape{background:var(--isabella-paper-2);padding-block:48px 40px;font-size:1rem;line-height:1.6;color:var(--isabella-ink-2)}
+/* ---------- rodapé ---------- */
+.rodape{background:var(--isabella-paper-2);padding-block:48px 40px;font-size:1.0625rem;line-height:1.6;color:var(--isabella-ink-2)}
 .rodape .marca{margin-bottom:18px}
 .rodape p{max-width:70ch}
 .rodape p+p{margin-top:10px}
@@ -174,47 +202,71 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 .fixo{position:fixed;z-index:30;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--isabella-paper);box-shadow:0 -1px 0 var(--isabella-hair),0 -12px 28px -16px rgba(20,47,40,.3)}
 .fixo .btn{width:100%}
 
-/* celular: retrato pequeno com o registro ao lado, antes do titulo (o rosto fica na primeira dobra) */
-@media (max-width:899px){
-  .hero{padding-block:20px 32px}
-  .hero-grid{grid-template-columns:112px minmax(0,1fr);gap:0 16px;align-items:center}
+/* celular: retrato pequeno ao lado do registro e dos chips; a ponte logo abaixo, inteira acima da barra fixa */
+@media (max-width:879px){
+  .hero-grid{grid-template-columns:84px minmax(0,1fr);gap:0 14px;align-items:center}
   .hero .txt{display:contents}
   .hero .txt>*{grid-column:1/-1}
-  .hero .arco{grid-column:1;grid-row:1;width:112px;margin:0}
-  .hero .arco::before{transform:translate(7px,7px)}
+  .hero .arco{grid-column:1;grid-row:1;width:84px;margin:0}
+  .hero .arco::before{transform:translate(5px,5px)}
   .hero .selo{display:none}
-  .hero .txt>.hero-id{grid-column:2;grid-row:1;margin:0}
-  .hero h1{margin-top:22px}
+  .hero .txt>.topline{grid-column:2;grid-row:1}
+  .topline{display:grid;gap:8px}
+  .hero h1{margin-top:18px}
+  .hero-sub{margin-top:14px;font-size:1.1875rem}
+  .hero-acao{margin-top:14px}
+  .hero-fine{margin-top:2px}
+}
+@media (max-width:379px){
+  .hero-grid{grid-template-columns:72px minmax(0,1fr)}
+  .hero .arco{width:72px}
+  .chip{min-height:30px;padding:3px 12px 3px 8px}
 }
 @media (min-width:640px){
   .barra ul{grid-template-columns:repeat(3,1fr)}
-  .barra li{border-top:0;border-left:1px solid var(--isabella-hair);padding-left:28px;justify-content:flex-start}
+  .barra li{border-top:0;border-left:1px solid var(--isabella-hair);padding-left:24px}
   .barra li:first-child{border-left:0;padding-left:0}
-  .servicos .lista{grid-template-columns:repeat(2,1fr);gap:40px 48px;margin-top:48px}
-  .item{grid-template-columns:1fr;border:0;padding-block:0;border-top:1px solid var(--isabella-hair-forte);padding-top:28px}
+  .servicos .lista{grid-template-columns:repeat(2,1fr);gap:40px 56px;margin-top:48px}
+  .item{grid-template-columns:1fr;border:0;padding-block:28px 0;border-top:1px solid var(--isabella-hair-forte)}
   .item:last-child{border-bottom:0}
   .item .ic{grid-row:auto;margin-bottom:10px}
   .item p{margin-top:8px}
-  .urgencia{grid-template-columns:28px 1fr 1.4fr;align-items:center;gap:6px 18px}
+  .urgencia{grid-template-columns:28px minmax(0,.8fr) 1.4fr;align-items:center;gap:6px 18px}
   .urgencia .i{grid-row:auto}
+  .cred{grid-template-columns:repeat(2,1fr)}
+  .trilha{grid-template-columns:repeat(3,1fr);gap:32px}
+  .etapa{grid-template-columns:1fr;gap:6px;padding-bottom:0}
+  .etapa::before{grid-row:auto;margin-bottom:12px}
+  .etapa:not(:last-child)::after{left:64px;right:-24px;top:23px;bottom:auto;width:auto;height:2px;background:linear-gradient(90deg,var(--isabella-hair-forte),var(--isabella-hair))}
 }
-@media (min-width:900px){
+@media (min-width:880px){
   body{padding-bottom:0}
   .topo .btn{display:inline-flex}
-  .hero{padding-block:56px 56px}
+  .hero{padding-block:64px 0}
+  .hero-grid{grid-template-columns:1.25fr .75fr;gap:72px;align-items:center}
+  .hero .txt{display:grid;gap:0}
+  .topline{display:grid;gap:14px}
+  .hero h1{margin-top:24px}
+  .hero-sub{margin-top:22px}
+  .hero-acao{margin-top:32px}
+  .hero-fine{margin-top:14px}
+  .hero .arco{width:100%;max-width:400px;margin-inline:0 auto}
   .barra{margin-top:72px}
-  .hero-grid{grid-template-columns:1.2fr .8fr;gap:72px;align-items:center}
-  .hero .arco{width:100%;max-width:420px;margin-inline:0 auto}
-  .sec{padding-block:104px}
-  .porque{padding-block:120px}
+  .barra li{min-height:76px;font-size:1.1875rem}
+  .reframe{padding-block:80px}
+  .reframe .grid{grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+  .servicos{padding-block:112px}
+  .porque{padding-block:128px}
   .porque .grid{grid-template-columns:.8fr 1.2fr;gap:88px;align-items:center}
   .porque .arco{order:-1;width:100%;max-width:380px}
   .porque .marca-dagua{right:-60px;top:-60px;width:560px;height:560px}
-  .prova{padding-block:96px}
-  .prova .grid{grid-template-columns:.8fr 1.2fr;gap:88px;align-items:center}
-  .prova .arco{width:100%;max-width:360px}
+  .prova{padding-block:104px}
+  .prova .grid{grid-template-columns:1.5fr .5fr;gap:64px;align-items:center}
+  .prova .arco{display:block;width:100%;max-width:300px}
+  .depois{padding-block:112px}
+  .faq{padding-block:104px}
   .faq .grid{grid-template-columns:.8fr 1.2fr;gap:88px;align-items:start}
-  .faq .cab{position:sticky;top:112px}
+  .faq .cab{position:sticky;top:104px}
   .local{padding-block:88px}
   .local .grid{grid-template-columns:1fr 1fr;gap:88px;align-items:center}
   .final{padding-block:120px}
@@ -223,8 +275,8 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .hero .arco img{animation:none}
-  .btn,.faq summary .i{transition:none}
+  .hero .arco img,.selo{animation:none}
+  .btn,.faq summary .i{transition:color .2s ease,background .2s ease}
 }
 </style>
 <style>
@@ -297,55 +349,30 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 
 #wa-modal,.wafloat{
   --wa:#25D366;
-  --wa-head-a:var(--isabella-surface);--wa-head-b:var(--isabella-ink);
+  --wa-head-a:var(--isabella-accent);--wa-head-b:var(--isabella-accent-deep,var(--isabella-accent));
   --wa-accent:var(--isabella-accent);--wa-accent-d:var(--isabella-accent-deep,var(--isabella-accent));
-  --wa-band:var(--isabella-clay,var(--isabella-paper-2,var(--isabella-paper)));--wa-surface:var(--isabella-surface);--wa-line:var(--isabella-hair-forte);
+  --wa-band:var(--isabella-paper-2,var(--isabella-paper));--wa-surface:var(--isabella-surface);--wa-line:var(--isabella-hair-forte);
   --wa-ink:var(--isabella-ink);--wa-muted:var(--isabella-ink-3);
   --wa-head-font:var(--isabella-display);--wa-body-font:var(--isabella-body);
 }
-/* header claro e centrado, foto com o contorno fino deslocado, sem bloco de cor. O X mora no canto e o texto do header e centrado e estreito: nunca se cruzam. */
-#wa-modal .widget{width:400px;max-height:calc(100dvh - 24px);overflow-y:auto;border-radius:20px;box-shadow:var(--isabella-sombra-foto,0 24px 60px -20px rgba(0,0,0,.35))}
-#wa-modal .wa-close{width:44px;height:44px;top:10px;right:10px;background:var(--isabella-paper-2,var(--isabella-paper));color:var(--isabella-ink);border:1px solid var(--isabella-hair);transition:background var(--isabella-dur,.2s) var(--isabella-ease,ease)}
-#wa-modal .wa-close:hover{background:var(--isabella-clay,var(--isabella-paper-2,var(--isabella-paper)))}
+#wa-modal .widget{width:400px;max-height:calc(100dvh - 24px);overflow-y:auto;border-radius:20px}
+#wa-modal .wa-close{width:44px;height:44px;top:8px;right:8px;background:var(--isabella-paper-2,var(--isabella-paper));color:var(--isabella-ink);border:1px solid var(--isabella-hair)}
 #wa-modal .wa-close svg{width:18px;height:18px}
-#wa-modal .whead{flex-direction:column;justify-content:center;gap:.9rem;padding:1.9rem 1.5rem 1.35rem;background:var(--isabella-surface);color:var(--isabella-ink);text-align:center}
-#wa-modal .avatar{width:88px;height:88px;border:0;background:none;display:block;margin:0 6px 0 0}
-#wa-modal .avatar::before{content:"";position:absolute;inset:0;border:1.5px solid var(--isabella-accent);border-radius:50%;transform:translate(6px,5px)}
-#wa-modal .avatar img{position:relative;box-shadow:0 0 0 3px var(--isabella-surface)}
-#wa-modal .who{align-items:center;gap:.3rem}
-#wa-modal .nm{font-weight:400;font-size:1.25rem;color:var(--isabella-ink)}
-#wa-modal .cred{font-size:.9375rem;font-weight:400;color:var(--isabella-ink-2);line-height:1.4}
-#wa-modal .online{justify-content:center;gap:.55rem;padding:.7rem 1.5rem;border-top:1px solid var(--isabella-hair);font-size:.9375rem;font-weight:500;color:var(--isabella-ink)}
-#wa-modal .online .ico{flex:none;width:20px;height:20px;color:var(--isabella-accent-deep,var(--isabella-accent))}
-#wa-modal .wbody{padding:1.6rem 1.5rem 1.75rem}
-#wa-modal .lead-line{font-weight:400;font-size:1.45rem;letter-spacing:.02em;line-height:1.3;text-align:center;text-wrap:balance;margin-bottom:1.25rem}
-#wa-modal .field{margin-bottom:.55rem}
-#wa-modal .field .lbl{font-size:1rem;font-weight:500;color:var(--isabella-ink);margin-bottom:.4rem}
-#wa-modal .field input{font-size:1.125rem;height:52px;border-color:var(--isabella-hair-forte)}
-#wa-modal .field input::placeholder{color:var(--isabella-ink-3)}
-#wa-modal .field input:focus{border-color:var(--isabella-ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--isabella-accent) 30%,transparent)}
-#wa-modal .wa-hint{margin:0 0 1.3rem;font-size:.9375rem;line-height:1.45;color:var(--isabella-ink-2)}
+#wa-modal .nm{font-size:1.25rem}
+#wa-modal .cred{font-size:.875rem;line-height:1.4}
+#wa-modal .online{font-size:.9375rem;font-weight:500;color:var(--isabella-ink)}
+#wa-modal .lead-line{color:var(--isabella-ink)}
+#wa-modal .field .lbl{font-size:.9375rem;color:var(--isabella-ink)}
+#wa-modal .field input{font-size:1.125rem;height:52px}
+#wa-modal .wa-hint{margin:.5rem 0 1.1rem;font-size:.9375rem;line-height:1.45;color:var(--isabella-ink-2)}
 #wa-modal .wa-err-msg{font-size:1rem;font-weight:500;color:var(--isabella-erro,#A03A34)}
 #wa-modal .field input.wa-err,#wa-modal .field input.wa-err:focus{border-color:var(--isabella-erro,#A03A34);box-shadow:0 0 0 3px color-mix(in srgb,var(--isabella-erro,#A03A34) 20%,transparent)}
-#wa-modal .btn{font-family:var(--isabella-body);font-weight:500;font-size:1.0625rem;letter-spacing:.01em;color:var(--isabella-on-accent);background:var(--isabella-cta-gradient,linear-gradient(180deg,var(--isabella-accent) 0%,var(--isabella-accent-deep,var(--isabella-accent)) 100%));box-shadow:var(--isabella-sombra-btn,0 0 0 0 transparent);border-radius:var(--isabella-r-btn,12px)}
-#wa-modal .btn:hover{filter:none;background:var(--isabella-cta-gradient-hover,var(--isabella-cta-gradient,linear-gradient(180deg,var(--isabella-accent) 0%,var(--isabella-accent-deep,var(--isabella-accent)) 100%)));box-shadow:var(--isabella-sombra-btn-hover,var(--isabella-sombra-btn,0 0 0 0 transparent))}
+#wa-modal .btn{background:#1A7F43}  /* verde WhatsApp escurecido: texto branco a 5:1 (o #25D366 dava 1,98:1) */
+#wa-modal .btn:hover{background:#156B38;filter:none}
 #wa-modal .btn .wa-ic{fill:currentColor}
-#wa-modal :focus-visible{outline:2px solid var(--isabella-ink);outline-offset:3px}
-/* tela 2: o X ocupa a faixa de cima (44px + 10px), o aviso comeca abaixo dela */
-#wa-modal .warn-body{padding:3.5rem 1.5rem 1.6rem}
-#wa-modal .notice{background:var(--isabella-paper);border:1px solid var(--isabella-hair-forte);border-radius:16px;padding:1.25rem 1.3rem 1.35rem}
-#wa-modal .notice-head{padding:0;border-radius:0;background:none;color:var(--isabella-ink);gap:.6rem;margin-bottom:.8rem;font-family:var(--isabella-display);font-weight:400;font-size:1.125rem;letter-spacing:.02em;line-height:1.3}
-#wa-modal .notice-head .ic{flex:none;width:1.5rem;height:1.5rem;color:var(--isabella-accent-deep,var(--isabella-accent))}
+#wa-modal .warn-body{padding-top:3.5rem}  /* o X ocupa a faixa de cima na tela do aviso */
 #wa-modal .notice p{font-size:1.0625rem}
-#wa-modal .notice .num,#wa-modal .num-reinforce b{font-family:var(--isabella-body);font-weight:500}
-#wa-modal .num-reinforce{font-size:1rem;color:var(--isabella-ink-2)}
-#wa-modal .back{font-size:1rem;min-height:44px;color:var(--isabella-ink-2);text-decoration:underline;text-underline-offset:3px}
-@media (max-height:700px){
-  #wa-modal .whead{padding-top:1.5rem;gap:.7rem}
-  #wa-modal .avatar{width:72px;height:72px}
-  #wa-modal .wbody{padding-top:1.25rem}
-  #wa-modal .lead-line{margin-bottom:1rem}
-}
+#wa-modal .back{font-size:1rem;min-height:44px}
 /* flutuante na cor da marca, com anel do fundo: sem ele o botao some sobre faixas de cor */
 .wafloat{right:28px;bottom:28px;width:60px;height:60px;background:var(--isabella-cta-gradient,linear-gradient(180deg,var(--isabella-accent) 0%,var(--isabella-accent-deep,var(--isabella-accent)) 100%));box-shadow:0 0 0 3px var(--isabella-paper),var(--isabella-sombra-btn,0 0 0 0 transparent);transition:transform var(--isabella-dur,.2s) var(--isabella-ease,ease),box-shadow var(--isabella-dur,.2s) var(--isabella-ease,ease)}
 .wafloat svg{fill:var(--isabella-on-accent)}
@@ -366,6 +393,12 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 [data-sticky]{transition:transform .3s ease,visibility 0s}
 [data-sticky].sticky-off{transform:translateY(110%);visibility:hidden;transition:transform .3s ease,visibility 0s .3s}
 @media (prefers-reduced-motion:reduce){[data-sticky],[data-sticky].sticky-off{transition:none}}
+/* celular: o CTA do hero some e a barra fixa fica visivel desde o topo, igual em toda LP de medico (Felipe, 14/11/2026; Fred, Aline). Alvo escondido nunca intersecta, entao a barra nao sai. */
+@media (max-width:879px){[data-sticky-alvo]{display:none!important}:has(> .hero-micro){display:none!important}}
+/* a frase padrao "Agende pelo WhatsApp em qualquer horario." mora na barra fixa no celular (Felipe, 14/11/2026); o gerador injeta o paragrafo .sticky-micro (sem tag literal aqui: o gabarito contaria o comentario como texto) */
+[data-sticky]{flex-wrap:wrap}
+.sticky-micro{flex-basis:100%;margin:8px 0 0;text-align:center;font-size:.9375rem;font-weight:500;line-height:1.3;color:inherit}
+@media (min-width:880px){.sticky-micro{display:none}}
 </style>
 </head>
 <body>
@@ -374,9 +407,9 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
   <div class="wrap">
     <div class="marca">
       <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#142F28" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#C4412B"/></svg>
-      <div><b>Isabella Graça Câmara</b><span>Médica hematologista · Montes Claros</span></div>
+      <div><b>Isabella Graça Câmara</b><span>Hematologista · Montes Claros</span></div>
     </div>
-    <button class="btn" type="button" data-wa>Agendar pelo WhatsApp</button>
+    <button class="btn" type="button" data-wa>Marcar consulta</button>
   </div>
 </header>
 
@@ -384,83 +417,98 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
 <section class="hero" data-bloco="hero">
   <div class="wrap hero-grid">
     <div class="txt">
-      <h1>Ferro baixo, trombose, gestação, hemograma alterado: hematologista com <span class="mt">residência na UFMG</span>.</h1>
-      <p class="hero-sub">Dra. Isabella Graça Câmara atende às quartas, em Montes Claros, em consulta de uma hora. Plantonista do CTI da Santa Casa e ex-preceptora de residentes.</p>
-      <p class="hero-formacao"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg><span>Residência em Hematologia e Hemoterapia na UFMG (2024 a 2026) e em Clínica Médica no HUCF Unimontes (2018 a 2020).</span></p>
-      <div class="hero-acao">
-        <button class="btn" type="button" data-wa data-sticky-alvo><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Agendar pelo WhatsApp</button>
-        <noscript><a class="btn" href="https://wa.me/5538999865405?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20particular%20com%20a%20Dra.%20Isabella%20Gra%C3%A7a%20C%C3%A2mara%2C%20hematologista.">Agendar pelo WhatsApp</a></noscript>
+      <div class="topline">
+        <p class="hero-id">Médica Hematologista · CRM-MG 73.571 · RQE 71.765</p>
+        <ul class="chips">
+          <li class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>Residência na UFMG</li>
+          <li class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Formada na Unimontes</li>
+        </ul>
       </div>
-      <p class="hero-id">Médica · CRM-MG 73.571 · RQE 71.765, Hematologia · Clínica Gastrus, Montes Claros</p>
+      <h1>Ferritina alterada no exame? Em <span class="mt">uma hora</span>, dá tempo de olhar a sua história e procurar o porquê.</h1>
+      <p class="hero-sub">Para quem já tomou ferro e viu a ferritina cair de novo, ou só quer saber se o resultado é normal.</p>
+      <div class="hero-acao">
+        <button class="btn" type="button" data-wa data-sticky-alvo><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Marcar consulta pelo WhatsApp</button>
+        <noscript><a class="btn" href="https://wa.me/5538999865405?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20com%20a%20Dra.%20Isabella%20Gra%C3%A7a%20C%C3%A2mara%2C%20hematologista.">Marcar consulta pelo WhatsApp</a></noscript>
+        <p class="micro"><span class="hero-micro">Agende pelo WhatsApp em qualquer horário.</span></p>
+      </div>
       <p class="hero-fine">Homens também são atendidos.</p>
     </div>
     <figure class="arco">
       <img src="fotos/isabella-calma.jpg" alt="Dra. Isabella Graça Câmara, de cabelo ondulado castanho-claro e jaleco branco, sorrindo de leve" width="800" height="1000" fetchpriority="high">
-      <span class="selo" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#142F28" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#C4412B"/></svg></span>
+      <span class="selo" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#142F28" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#C4412B"/></svg></span>
     </figure>
   </div>
   <div class="barra" data-bloco="beneficios" role="group" aria-label="Em resumo">
     <div class="wrap">
       <ul>
-        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Consulta de 1 hora</li>
-        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>Quartas, das 13h às 17h, na Gastrus</li>
-        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>2 RQE: Hematologia e Clínica Médica</li>
+        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Pedido pelo WhatsApp, a qualquer hora</li>
+        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>Quartas à tarde, na Gastrus</li>
+        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Uma hora de consulta, particular ou convênio</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reframe" data-bloco="reframe">
+  <div class="wrap grid" data-rv>
+    <h2 class="q">Hematologista é médico de câncer?</h2>
+    <div class="txt">
+      <p class="resp">Não só. E exame alterado tem mais de uma explicação.</p>
+      <p>Hematologia é a especialidade do sangue, e câncer é uma parte dela. Ferritina fora da faixa, anemia e trombose são outra parte, e são o que esta consulta olha. Qual explicação vale para o seu exame só se lê com a sua história ao lado. Se o medo é câncer, diga isso na consulta.</p>
     </div>
   </div>
 </section>
 
 <section class="sec servicos" data-bloco="servicos">
   <div class="wrap" data-rv>
-    <h2>Quatro queixas, e o que a consulta faz com cada uma</h2>
-    <p class="intro">É por estes motivos que se marca hematologista. Em cada um, a consulta termina em exame pedido ou decisão tomada.</p>
+    <h2><span class="pq">Meu caso é para hematologista?</span> Estes quatro são.</h2>
+    <p class="lead">Em cada um, a consulta termina em exame pedido ou decisão tomada.</p>
     <div class="lista">
       <div class="item">
         <span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
-        <h3>Meu exame de ferro veio baixo</h3>
-        <p>Ferritina é o estoque de ferro do corpo. Quando cai, a pergunta é por onde o ferro sai ou por que não entra. A Dra. Isabella pede os exames que respondem isso e define como repor.</p>
+        <h3>Minha ferritina veio baixa, ou alta</h3>
+        <p>Ferritina é o estoque de ferro do corpo. Baixa pode vir de perda de sangue, alimentação ou absorção. Alta tem outras explicações, e nem sempre é ferro demais. A consulta procura qual vale para você.</p>
+      </div>
+      <div class="item">
+        <span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>
+        <h3>Meu hemograma veio alterado</h3>
+        <p>Hemograma conta as células do sangue: glóbulos vermelhos, glóbulos brancos e plaquetas. Um valor fora da faixa ganha sentido ao lado dos exames anteriores. A Dra. Isabella compara e diz o que pede investigação e o que se acompanha.</p>
       </div>
       <div class="item">
         <span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg></span>
-        <h3>Já tive trombose, ou há casos na família</h3>
-        <p>Trombose é um coágulo dentro da veia. Depois dela, duas decisões: por quanto tempo usar anticoagulante e se vale investigar trombofilia, a tendência a formar coágulos. A consulta toma as duas.</p>
+        <h3>Já tive trombose, ou tem casos na família</h3>
+        <p>Trombose é um coágulo que se forma dentro da veia. Trombofilia é a tendência a formar esses coágulos. A consulta olha a sua história e a da sua família, e avalia se vale investigar.</p>
       </div>
       <div class="item">
         <span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></svg></span>
         <h3>Estou grávida, ou quero engravidar</h3>
-        <p>Na gestação, o corpo pede mais ferro. Quem já teve trombose, ou tem casos na família, precisa decidir antes se usa anticoagulante. O pré-natal segue com o seu obstetra; a consulta responde a parte do sangue.</p>
-      </div>
-      <div class="item">
-        <span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg></span>
-        <h3>Meu hemograma veio alterado</h3>
-        <p>Plaqueta baixa ou alta, glóbulos brancos fora da faixa, hemoglobina que não sobe. A Dra. Isabella compara com os exames anteriores e diz o que se repete, o que se investiga e o que só se acompanha.</p>
+        <p>Na gestação, o corpo pede mais ferro. Se há trombose na sua história ou na da família, vale conversar sobre isso antes e durante. O pré-natal segue com o seu obstetra; a consulta olha a parte do sangue.</p>
       </div>
     </div>
     <div class="urgencia" role="note">
       <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-      <h3>Quando não esperar a consulta</h3>
-      <p>Sangramento, falta de ar de repente, dor no peito, ou perna inchada e dolorida de um lado só: procure o pronto-atendimento ou ligue 192.</p>
+      <h3>Sinal de alerta não espera a consulta</h3>
+      <p>Perna inchada e dolorida de um lado só, falta de ar de repente, dor no peito, sangramento que não para ou sangramento na gestação: procure o pronto-atendimento ou ligue 192.</p>
     </div>
-    <div class="acao"><button class="btn" type="button" data-wa>Agendar pelo WhatsApp</button></div>
   </div>
 </section>
 
 <section class="porque" data-bloco="porque">
   <img class="marca-dagua" src="assets/simbolo-escuro.svg" alt="" aria-hidden="true" width="420" height="420">
   <div class="wrap grid" data-rv>
-    <div class="txt">
-      <h2>Por que uma hora</h2>
-      <p class="intro">Exame de sangue se lê em série, com a história de quem fez ao lado. Numa consulta curta, isso não cabe.</p>
+    <div class="txt sec">
+      <h2><span class="pq">Meu médico já passou ferro. Preciso de hematologista?</span> Ferritina que sobe e cai de novo pede outra pergunta: por quê.</h2>
+      <p class="lead">Tomou ferro, a ferritina subiu e caiu de novo? Vale procurar o porquê, e isso pede tempo para olhar exames e história. A consulta da Dra. Isabella dura uma hora.</p>
       <div class="passos">
         <div class="passo">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
-          <h3>Os exames anteriores</h3>
-          <p>Traga os hemogramas e as ferritinas antigos. A tendência entre eles diz mais que o último resultado sozinho.</p>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+          <h3>Seus exames antigos, lado a lado</h3>
+          <p>Traga os hemogramas e as ferritinas de antes, para pôr ao lado do último resultado.</p>
         </div>
         <div class="passo">
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-          <h3>A história completa</h3>
-          <p>Menstruação, gestações, cirurgias, remédios em uso, casos de trombose na família. É o que orienta o pedido de exame.</p>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+          <h3>A sua história inteira</h3>
+          <p>Uma hora dá tempo de contar o que veio antes do exame, sem pressa.</p>
         </div>
         <div class="passo">
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
@@ -470,16 +518,16 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
       </div>
     </div>
     <figure class="arco">
-      <img src="fotos/isabella-ia-mesa.jpg" alt="Dra. Isabella Graça Câmara de jaleco branco, sentada à mesa do consultório" width="928" height="1152" loading="lazy">
+      <img src="fotos/isabella-ia-exame.jpg" alt="Dra. Isabella Graça Câmara de jaleco branco, sentada no consultório, mostrando uma folha de exame" width="928" height="1152" loading="lazy">
     </figure>
   </div>
 </section>
 
-<section class="prova" data-bloco="prova">
+<section class="sec prova" data-bloco="prova">
   <div class="wrap grid" data-rv>
     <div class="txt">
-      <h2>Formação e trajetória</h2>
-      <p class="intro">Antes da hematologia, a Dra. Isabella fez clínica médica e plantão de UTI. Por isso a consulta lê o sangue junto com o resto do corpo.</p>
+      <h2><span class="pq">Ela acabou de se formar. Posso confiar?</span> Terminou a residência em 2026. Cada registro se confere.</h2>
+      <p class="lead">Ainda não há avaliações públicas. O que existe para conferir é a formação, com datas e registros.</p>
       <ul class="cred">
         <li>
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
@@ -489,15 +537,10 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
         <li>
           <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
           <h3>Clínica Médica no HUCF · RQE <span class="num">71.766</span></h3>
-          <p>Residência em Clínica Médica no Hospital Universitário Clemente de Faria, da Unimontes, de março de 2018 a fevereiro de 2020. Graduação em Medicina pela Unimontes.</p>
-        </li>
-        <li>
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>UTI e preceptoria</h3>
-          <p>Plantonista do CTI Geral da Santa Casa de Montes Claros e, em 2020 e 2021, da UTI COVID do HUCF. Preceptora da residência de Clínica Médica na Santa Casa (2021 a 2024) e no HUCF (2022 a 2024).</p>
+          <p>Residência em Clínica Médica no Hospital Universitário Clemente de Faria, da Unimontes, de março de 2018 a fevereiro de 2020. Antes, graduação em Medicina pela Unimontes.</p>
         </li>
       </ul>
-      <p class="nota">Médica, CRM-MG 73.571. O CRM e os dois RQE se conferem no site do Conselho Regional de Medicina de Minas Gerais.</p>
+      <p class="nota">Para conferir, busque CRM-MG 73.571 no site do Conselho Regional de Medicina de Minas Gerais.</p>
     </div>
     <figure class="arco">
       <img src="fotos/isabella-ia-microscopio.jpg" alt="Dra. Isabella Graça Câmara de jaleco branco, ao microscópio" width="928" height="1152" loading="lazy">
@@ -505,28 +548,39 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
   </div>
 </section>
 
+<section class="sec depois" data-bloco="depois">
+  <div class="wrap" data-rv>
+    <h2><span class="pq">Se eu mandar mensagem, o que acontece?</span> Três passos, e o primeiro é só uma mensagem.</h2>
+    <ol class="trilha">
+      <li class="etapa"><h3>Você escreve no WhatsApp</h3><p>A qualquer hora. Pode ser só uma pergunta, sem compromisso de marcar.</p></li>
+      <li class="etapa"><h3>A recepção responde</h3><p>A recepção da Clínica Gastrus manda o próximo horário de quarta e o valor da consulta.</p></li>
+      <li class="etapa"><h3>Você vem à consulta</h3><p>Uma hora, na Clínica Gastrus. Leve os seus exames, inclusive os antigos, impressos ou no celular.</p></li>
+    </ol>
+    <div class="acao"><button class="btn" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Marcar pelo WhatsApp</button></div>
+  </div>
+</section>
+
 <section class="sec faq" data-bloco="faq">
   <div class="wrap grid" data-rv>
     <div class="cab">
-      <h2>Perguntas e respostas</h2>
-      <div class="acao"><button class="btn btn--fino" type="button" data-wa>Agendar pelo WhatsApp</button></div>
+      <h2><span class="pq">Ficou alguma dúvida?</span> Cinco respostas antes de você escrever.</h2>
+      <div class="acao"><button class="btn btn--fino" type="button" data-wa>Marcar pelo WhatsApp</button></div>
     </div>
     <div class="perguntas">
-      <details name="faq"><summary>Quanto dura a consulta, e como é?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Uma hora, presencial. A Dra. Isabella revê a sua história e os exames que você trouxer, e sai dali o pedido de exame ou a conduta.</p></details>
-      <details name="faq"><summary>Preciso levar exames?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Leve todos os que tiver, inclusive os antigos, impressos ou no celular. A comparação entre eles pesa na decisão.</p></details>
-      <details name="faq"><summary>Quando e onde a Dra. Isabella atende?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Às quartas, das 13h às 17h, na Clínica Gastrus, em Montes Claros.</p></details>
-      <details name="faq"><summary>Ela atende homens?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Sim. A consulta de uma hora é a mesma para homens e mulheres.</p></details>
-      <details name="faq"><summary>Quanto custa e como marco?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>A consulta é particular. O valor e os horários livres a recepção responde na conversa pelo WhatsApp, e é por lá que você marca.</p></details>
-      <details name="faq"><summary>Dá para tirar a dúvida do meu exame pelo WhatsApp?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Não. Exame não se interpreta por mensagem, só na consulta, com a sua história ao lado. O WhatsApp é para marcar.</p></details>
+      <details name="faq"><summary>Quanto custa? Aceita convênio?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Atende particular e convênio. Qual é o seu plano, o valor e os horários livres a recepção confirma na conversa pelo WhatsApp.</p></details>
+      <details name="faq"><summary>Ela atende homem?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Sim. A consulta é a mesma para homens e mulheres: uma hora, presencial.</p></details>
+      <details name="faq"><summary>Posso mandar o meu exame pelo WhatsApp para ela ver?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Não. Exame se lê na consulta, com a sua história ao lado. Pelo WhatsApp, a recepção marca o horário e responde sobre a consulta.</p></details>
+      <details name="faq"><summary>Preciso levar exames? E se forem antigos?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Leve todos os que tiver, de qualquer laboratório. Com os antigos, dá para comparar com o último.</p></details>
+      <details name="faq"><summary>Meu médico já pediu exames e receitou remédio. Ainda faz sentido marcar?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Faz, se a dúvida continua. Leve o que ele pediu e o que receitou: a consulta parte daí, e o seu médico segue acompanhando você.</p></details>
     </div>
   </div>
 </section>
 
-<section class="local" data-bloco="local">
+<section class="sec local" data-bloco="local">
   <div class="wrap grid" data-rv>
     <div class="txt">
-      <h2>Onde é a consulta</h2>
-      <p class="intro">A consulta é presencial e pontual: chegue uns minutinhos antes.</p>
+      <h2><span class="pq">Onde e quando ela atende?</span> Na Clínica Gastrus, às quartas à tarde.</h2>
+      <p class="lead">Consulta presencial, com horário marcado pela recepção no WhatsApp.</p>
     </div>
     <div class="placa">
       <h3>Clínica Gastrus</h3>
@@ -539,12 +593,12 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
   </div>
 </section>
 
-<section class="final" data-bloco="cta-final">
+<section class="sec final" data-bloco="cta-final">
   <div class="wrap" data-rv>
     <svg class="simbolo" viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#F2F5EE" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#F0866C"/></svg>
-    <h2>Exame alterado parado na gaveta não responde nada</h2>
-    <p>Mande uma mensagem: a recepção da Clínica Gastrus responde pelo WhatsApp com os horários de quarta à tarde.</p>
-    <button class="btn btn--claro" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Agendar pelo WhatsApp</button>
+    <h2>Uma hora para olhar o seu sangue.</h2>
+    <p>Escreva para a recepção da Clínica Gastrus. Pode ser só uma pergunta.</p>
+    <button class="btn btn--claro" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Marcar consulta pelo WhatsApp</button>
   </div>
 </section>
 </main>
@@ -555,15 +609,16 @@ h1,h2,h3{font-family:var(--isabella-display);font-weight:560;text-wrap:balance;l
       <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#142F28" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#C4412B"/></svg>
       <div><b>Isabella Graça Câmara</b></div>
     </div>
-    <p>Médica hematologista · CRM-MG 73.571 · RQE 71.765, Hematologia · RQE 71.766, Clínica Médica</p>
+    <p>Médica Hematologista · CRM-MG 73.571 · RQE 71.765, Hematologia · RQE 71.766, Clínica Médica</p>
     <p>Clínica Gastrus · R. Eng. João Antônio Pimenta, 163, Cidade Santa Maria, Montes Claros, MG</p>
     <p class="aviso">Este conteúdo é informativo e não substitui consulta médica.</p>
   </div>
 </footer>
 
 <div class="fixo" data-bloco="cta-flutuante" data-sticky>
-  <button class="btn" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Agendar pelo WhatsApp</button>
-  <noscript><a class="btn" style="display:none" href="https://wa.me/5538999865405?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20particular%20com%20a%20Dra.%20Isabella%20Gra%C3%A7a%20C%C3%A2mara%2C%20hematologista.">Agendar pelo WhatsApp</a></noscript>
+  <button class="btn" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Marcar pelo WhatsApp</button>
+  <noscript><a class="btn" style="display:none" href="https://wa.me/5538999865405?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20com%20a%20Dra.%20Isabella%20Gra%C3%A7a%20C%C3%A2mara%2C%20hematologista.">Marcar pelo WhatsApp</a></noscript>
+  <p class="sticky-micro">Agende pelo WhatsApp em qualquer horário.</p>
 </div>
 
 <script>
@@ -596,13 +651,14 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
     <!-- tela 1: captura -->
     <div class="screen active" id="wa-s1">
       <div class="whead">
-        <span class="avatar foto">
-          <img src="fotos/isabella-avatar.jpg" alt="Foto da Dra. Isabella Graça Câmara, de jaleco branco, sorrindo" width="96" height="96" decoding="async">
+        <span class="avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13a8 8 0 0 1 16 0"/><path d="M4 13v3a2 2 0 0 0 2 2h1v-5H6a2 2 0 0 0-2 2z"/><path d="M20 13v3a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"/><path d="M17 18a3 3 0 0 1-3 2.5h-2"/></svg>
+          <span class="on"></span>
         </span>
         <div class="who">
-          <span class="nm">Dra. Isabella Graça Câmara</span>
-          <span class="cred">Médica hematologista · CRM-MG 73.571</span>
-          <span class="cred">Consulta de uma hora, às quartas à tarde</span>
+          <span class="nm">Jirvana</span>
+          <span class="cred">Atendente da Dra. Isabella · Hematologista</span>
+          <span class="cred">Clínica Gastrus · Montes Claros</span>
         </div>
       </div>
       <div class="online"><span class="dot"></span>Atendimento na Clínica Gastrus, Montes Claros</div>
@@ -629,7 +685,7 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
           </div>
           <p>Ao abrir o WhatsApp, pode aparecer um aviso de <b>"número desconhecido"</b>.</p>
           <p><b>Isso é normal.</b> O número <b class="num" data-wa-num></b>, da <b>Clínica Gastrus, onde a Dra. Isabella atende</b>, é oficial.</p>
-          <p>É só clicar em <b>Continuar</b> para falar com a recepção da Clínica Gastrus, para a consulta com a Dra. Isabella.</p>
+          <p>É só clicar em <b>Continuar</b> para falar com a Jirvana.</p>
         </div>
         <button class="btn" id="wa-last-step" type="button">
           <svg class="wa-ic" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35z"/></svg>
@@ -647,7 +703,7 @@ if (document.readyState === 'loading') { document.addEventListener('DOMContentLo
   var WEBHOOK_URL = 'https://n8n.srv1732310.hstgr.cloud/webhook/widget-lead?t=isabella';
   // UNICO lugar do numero do WhatsApp (digitos com DDI). Trocou o numero? Troque so esta linha e o noscript: o link e o numero exibido no aviso saem daqui.
   var WA_PHONE = '5538999865405';
-  var WA = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent('Olá, vim pelo site e queria marcar uma consulta particular com a Dra. Isabella Graça Câmara, hematologista.');
+  var WA = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent('Olá, vim pelo site e queria marcar uma consulta com a Dra. Isabella Graça Câmara, hematologista.');
   (function(){ var d = WA_PHONE.replace(/\D/g, ''); var f = '(' + d.slice(2,4) + ') ' + d.slice(4,5) + ' ' + d.slice(5,9) + '-' + d.slice(9); document.querySelectorAll('[data-wa-num]').forEach(function(n){ n.textContent = f; }); })();
   var modal = document.getElementById('wa-modal'), s1 = document.getElementById('wa-s1'), s2 = document.getElementById('wa-s2');
   function show(el){ s1.classList.remove('active'); s2.classList.remove('active'); el.classList.add('active'); var w=modal.querySelector('.widget'); if(w) w.scrollTop=0; }
