@@ -50,9 +50,11 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 .wa{width:22px;height:22px;flex:none;fill:currentColor}
 
 /* botão: um só desenho, em três superfícies */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.65rem;min-height:56px;padding:0 28px;border:0;border-radius:999px;background:var(--isabella-accent);color:var(--isabella-on-accent);font-family:var(--isabella-body);font-size:1.0625rem;font-weight:600;line-height:1.2;letter-spacing:.005em;text-decoration:none;cursor:pointer;box-shadow:0 1px 2px rgba(20,47,40,.2),0 12px 24px -12px rgba(31,91,71,.6);transition:background .2s ease,color .2s ease,transform .25s var(--isabella-ease),box-shadow .25s var(--isabella-ease)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 30px;border:0;border-radius:999px;background:linear-gradient(180deg,var(--isabella-accent) 0%,var(--isabella-accent-deep) 100%);color:var(--isabella-on-accent);font-family:var(--isabella-body);font-size:1.125rem;font-weight:600;line-height:1.2;letter-spacing:.005em;text-decoration:none;cursor:pointer;box-shadow:0 1px 2px rgba(20,47,40,.2),0 12px 24px -12px rgba(31,91,71,.6);transition:background .2s ease,color .2s ease,transform .25s var(--isabella-ease),box-shadow .25s var(--isabella-ease)}
 .btn:hover{background:var(--isabella-accent-deep);transform:translateY(-1px);box-shadow:0 1px 2px rgba(20,47,40,.2),0 16px 28px -12px rgba(31,91,71,.7)}
 .btn:active{transform:translateY(0);transition-duration:.1s}
+.btn .seta{flex:none;width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--isabella-ease)}
+.btn:hover .seta{transform:translateX(4px)}
 .btn--claro{background:var(--isabella-paper);color:var(--isabella-ink)}
 .btn--claro:hover{background:var(--isabella-surface);color:var(--isabella-ink)}
 .btn--fino{background:transparent;color:var(--isabella-accent);box-shadow:inset 0 0 0 1.5px var(--isabella-accent);min-height:48px;padding:0 22px}
@@ -65,12 +67,13 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 .marca svg{width:36px;height:36px;flex:none}
 .marca b{display:block;font-family:var(--isabella-display);font-size:1.3125rem;font-weight:560;line-height:1.15;letter-spacing:-.005em}
 .marca span{display:block;font-size:.9375rem;line-height:1.3;color:var(--isabella-ink-2)}
-.topo .btn{display:none;min-height:48px;padding:0 22px}
+.topo .btn{display:none;min-height:48px;padding:0 24px;font-size:1rem}
 
-/* ---------- primeira dobra: registro e chips, a ponte, o botão ---------- */
+/* ---------- primeira dobra: registro, 2 credenciais, a ponte, o apoio, o botão (ordem da ML) ---------- */
 .hero{padding-block:24px 0;position:relative;background:radial-gradient(120% 70% at 85% 0%,var(--isabella-paper-2) 0%,transparent 60%)}
 .hero-grid{display:grid;gap:40px}
-.hero-id{font-size:.9375rem;line-height:1.45;color:var(--isabella-ink-3);letter-spacing:.01em}
+.hero .txt{display:grid;gap:14px;align-content:center}
+.hero-id{font-size:.9375rem;line-height:1.45;font-weight:600;color:var(--isabella-ink-2);letter-spacing:.1em;text-transform:uppercase}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:4px 14px 4px 10px;border-radius:999px;background:var(--isabella-surface);box-shadow:inset 0 0 0 1px var(--isabella-hair);font-size:.9375rem;font-weight:500;line-height:1.25;color:var(--isabella-ink)}
 .chip .i{width:18px;height:18px;color:var(--isabella-accent)}
@@ -79,7 +82,6 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 .hero-sub{font-size:1.3125rem;line-height:1.5;color:var(--isabella-ink-2);max-width:40ch}
 .hero-acao{display:grid;justify-items:start;gap:10px}
 .micro{font-size:1.0625rem;line-height:1.45;color:var(--isabella-ink-2)}
-.hero-fine{font-size:.9375rem;line-height:1.5;color:var(--isabella-ink-3)}
 .arco{position:relative;width:min(78%,300px);margin-inline:auto;aspect-ratio:4/5}
 .arco::before{content:"";position:absolute;inset:0;border:1.5px solid var(--isabella-hair-forte);border-radius:999px 999px 24px 24px;transform:translate(14px,14px);opacity:.45}
 .arco img{position:relative;width:100%;height:100%;object-fit:cover;border-radius:999px 999px 24px 24px;box-shadow:var(--isabella-sombra)}
@@ -89,12 +91,12 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 @keyframes revela{from{clip-path:inset(100% 0 0 0 round 999px 999px 24px 24px)}to{clip-path:inset(0 0 0 0 round 999px 999px 24px 24px)}}
 @keyframes pinga{from{opacity:0;transform:translateY(-14px) scale(.9)}to{opacity:1;transform:none}}
 
-/* barra: três respostas de quem decide marcar */
-.barra{margin-top:40px;background:var(--isabella-surface);box-shadow:0 -1px 0 var(--isabella-hair),0 1px 0 var(--isabella-hair)}
-.barra ul{display:grid}
-.barra li{display:flex;align-items:center;gap:14px;min-height:60px;font-size:1.0625rem;font-weight:500;line-height:1.35;border-top:1px solid var(--isabella-hair)}
-.barra li:first-child{border-top:0}
-.barra .i{width:26px;height:26px;color:var(--isabella-accent)}
+/* faixa de autoridade: o componente .fatos da ML, seção própria logo depois do hero */
+.fatos{background:var(--isabella-paper-2);padding:10px 0;border-block:1px solid var(--isabella-hair)}
+.fatos ul{display:grid}
+.fatos li{display:flex;align-items:center;gap:16px;padding:16px 0;font-size:1.125rem;line-height:1.45;color:var(--isabella-ink)}
+.fatos li+li{border-top:1px solid var(--isabella-hair)}
+.fatos .ico{flex:none;width:40px;height:40px;padding:8px;border-radius:50%;background:var(--isabella-paper);color:var(--isabella-accent);box-shadow:0 0 0 1px var(--isabella-hair);fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 
 /* seção: o título já é a resposta */
 .sec h2{font-size:clamp(28px,calc(1.1rem + 2.5vw),46px);line-height:1.1;letter-spacing:-.01em;max-width:22ch}
@@ -125,6 +127,7 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 .urgencia h3{font-family:var(--isabella-body);font-size:1.1875rem;font-weight:600;line-height:1.35}
 .urgencia p{font-size:1.0625rem;line-height:1.55;color:var(--isabella-ink-2)}
 .urgencia a{font-weight:600}
+.servicos .acao{margin-top:40px}
 
 /* ---------- porque: a hora, em faixa escura ---------- */
 .porque{position:relative;overflow:hidden;background:var(--isabella-forest);color:var(--isabella-on-forest);padding-block:88px}
@@ -201,34 +204,30 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 .rodape p+p{margin-top:10px}
 .rodape .aviso{margin-top:18px;padding-top:18px;border-top:1px solid var(--isabella-hair);font-size:.9375rem;color:var(--isabella-ink-3)}
 
-/* botão fixo: barra no celular, pílula no desktop */
+/* botão fixo: barra no celular; na tela larga, o círculo do WhatsApp (.wafloat, como a ML). O seletor leva a tag para vencer o CSS do widget, que vem depois */
 .fixo{position:fixed;z-index:30;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--isabella-paper);box-shadow:0 -1px 0 var(--isabella-hair),0 -12px 28px -16px rgba(20,47,40,.3)}
 .fixo .btn{width:100%}
 
-/* celular: retrato pequeno ao lado do registro e dos chips; a ponte logo abaixo, inteira acima da barra fixa */
+/* celular: a foto é o fundo do hero e o texto assenta embaixo, sobre o verde (molde da ML) */
 @media (max-width:879px){
-  .hero-grid{grid-template-columns:84px minmax(0,1fr);gap:0 14px;align-items:center}
-  .hero .txt{display:contents}
-  .hero .txt>*{grid-column:1/-1}
-  .hero .arco{grid-column:1;grid-row:1;width:84px;margin:0}
-  .hero .arco::before{transform:translate(5px,5px)}
+  .hero{display:flex;flex-direction:column;justify-content:flex-end;min-height:calc(100svh - 64px - 100px);padding:0 0 22px;background:var(--isabella-forest);overflow:hidden}
+  .hero-grid{display:block}
+  .hero .arco{position:absolute;inset:0;width:100%;height:100%;max-width:none;margin:0;aspect-ratio:auto}
+  .hero .arco img{border-radius:0;box-shadow:none;object-position:50% 8%;animation:none}
+  .hero .arco::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,58,48,0) 40%,rgba(23,58,48,.5) 100%)}
+  .hero .txt::before{content:"";position:absolute;z-index:-1;left:-20px;right:-20px;top:-96px;bottom:-22px;background:linear-gradient(180deg,rgba(23,58,48,0) 0,rgba(23,58,48,.88) 84px,var(--isabella-forest) 140px)}
   .hero .selo{display:none}
-  .hero .txt>.topline{grid-column:2;grid-row:1}
-  .topline{display:grid;gap:8px}
-  .hero h1{margin-top:18px}
-  .hero-sub{margin-top:14px;font-size:1.1875rem}
-  .hero-acao{margin-top:14px}
-  .hero-fine{margin-top:2px}
-}
-@media (max-width:379px){
-  .hero-grid{grid-template-columns:72px minmax(0,1fr)}
-  .hero .arco{width:72px}
-  .chip{min-height:30px;padding:3px 12px 3px 8px}
+  .hero .txt{position:relative;z-index:1;gap:12px}
+  .hero h1{color:var(--isabella-on-forest);font-size:clamp(1.75rem,4.3svh,2.25rem);line-height:1.12}
+  .hero .hero-id{color:var(--isabella-on-forest-2)}
+  .hero .chip{color:var(--isabella-on-forest)}
+  .hero .chip::before{background:var(--isabella-gota-claro)}
+  .hero-sub{font-size:1.1875rem;color:var(--isabella-on-forest-2)}
+  .hero .mt{background:linear-gradient(transparent 62%,rgba(240,134,108,.45) 62% 92%,transparent 92%)}
+  .fixo{display:block}
+  button.wafloat{display:none}
 }
 @media (min-width:640px){
-  .barra ul{grid-template-columns:repeat(3,1fr)}
-  .barra li{border-top:0;border-left:1px solid var(--isabella-hair);padding-left:24px}
-  .barra li:first-child{border-left:0;padding-left:0}
   .servicos .lista{grid-template-columns:repeat(2,1fr);gap:40px 56px;margin-top:48px}
   .item{grid-template-columns:1fr;border:0;padding-block:28px 0;border-top:1px solid var(--isabella-hair-forte)}
   .item:last-child{border-bottom:0}
@@ -245,17 +244,16 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 @media (min-width:880px){
   body{padding-bottom:0}
   .topo .btn{display:inline-flex}
-  .hero{padding-block:64px 0}
   .hero-grid{grid-template-columns:1.25fr .75fr;gap:72px;align-items:center}
-  .hero .txt{display:grid;gap:0}
-  .topline{display:grid;gap:14px}
-  .hero h1{margin-top:24px}
-  .hero-sub{margin-top:22px}
-  .hero-acao{margin-top:32px}
-  .hero-fine{margin-top:14px}
+    .hero .txt{gap:22px}
+  .hero-acao{margin-top:10px}
   .hero .arco{width:100%;max-width:400px;margin-inline:0 auto}
-  .barra{margin-top:72px}
-  .barra li{min-height:76px;font-size:1.1875rem}
+  .hero{padding-block:72px 88px}
+  .fatos{padding:0}
+  .fatos ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .fatos li{padding:26px 28px;border-top:0}
+  .fatos li:first-child{padding-left:0}
+  .fatos li+li{border-left:1px solid var(--isabella-hair)}
   .reframe{padding-block:80px}
   .reframe .grid{grid-template-columns:1fr 1fr;gap:72px;align-items:start}
   .servicos{padding-block:112px}
@@ -264,8 +262,8 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
   .porque .arco{order:-1;width:100%;max-width:380px}
   .porque .marca-dagua{right:-60px;top:-60px;width:560px;height:560px}
   .prova{padding-block:104px}
-  .prova .grid{grid-template-columns:1.5fr .5fr;gap:64px;align-items:center}
-  .prova .arco{display:block;width:100%;max-width:300px}
+  .prova .grid{grid-template-columns:.5fr 1.5fr;gap:64px;align-items:center}
+  .prova .arco{display:block;order:-1;width:100%;max-width:300px}
   .depois{padding-block:112px}
   .faq{padding-block:104px}
   .faq .grid{grid-template-columns:.8fr 1.2fr;gap:88px;align-items:start}
@@ -273,14 +271,55 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
   .local{padding-block:88px}
   .local .grid{grid-template-columns:1fr 1fr;gap:88px;align-items:center}
   .final{padding-block:120px}
-  .fixo{left:auto;right:28px;bottom:28px;padding:0;background:none;box-shadow:none}
-  .fixo .btn{width:auto;box-shadow:0 0 0 3px var(--isabella-paper),0 14px 28px -10px rgba(20,47,40,.5)}
+  .fixo{display:none}
+  button.wafloat{display:flex}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
+  .btn .seta{transition:none}
   .hero .arco img,.selo{animation:none}
   .btn,.faq summary .i{transition:color .2s ease,background .2s ease}
 }
+
+/* ===== assinatura visual: direção B, o fio da gota (Felipe, 15/11/2026; direcoes/index.html) ===== */
+.arco::before{display:none}
+.chip{background:none;box-shadow:none;border-radius:0;padding:0;min-height:0}
+.chip .i,.cred .i,.passo .i{display:none}
+.item .ic{display:none}
+.item{grid-template-columns:1fr}
+.cred li{grid-template-columns:1fr}
+.etapa:not(:last-child)::after{display:none}
+
+/* B. O fio da gota: um fio verde desce do alto de cada seção e termina numa gota.
+   A página "pinga" de assunto em assunto; a gota do símbolo vira o marcador de tudo. */
+:root{--gota-cheia:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2215 2 70 96%22%3E%3Cpath d=%22M50 6.5C56 19.4 80 40.4 80 62A30 30 0 0 1 20 62C20 40.4 44 19.4 50 6.5Z%22 fill=%22%23000%22/%3E%3C/svg%3E");--gota-linha:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2215 2 70 96%22%3E%3Cpath d=%22M50 6.5C56 19.4 80 40.4 80 62A30 30 0 0 1 20 62C20 40.4 44 19.4 50 6.5Z%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%228%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E");--x-wrap:max(20px,calc((100% - 1120px) / 2))}
+section.sec:not(.final){position:relative}
+section.sec:not(.final)::before{content:"";position:absolute;top:0;left:var(--x-wrap);width:1.5px;height:44px;background:var(--isabella-accent);transform-origin:top;transition:transform .9s var(--isabella-ease)}
+section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(var(--x-wrap) - 6px);width:13.5px;height:18px;background:var(--isabella-gota);-webkit-mask:var(--gota-cheia) center/contain no-repeat;mask:var(--gota-cheia) center/contain no-repeat;transition:opacity .4s ease .75s,transform .7s var(--isabella-ease) .75s}
+.rv section.sec:not(:has(.in))::before{transform:scaleY(0)}
+.rv section.sec:not(:has(.in))::after{opacity:0;transform:translateY(-14px)}
+@media (max-width:879px){.servicos,.prova,.depois,.faq,.local{padding-top:96px}}
+@media (min-width:880px){.local{padding-top:112px}}
+/* credencial do hero: gota no lugar do ícone */
+.chips{gap:6px 18px}
+.chip::before{content:"";flex:none;width:10px;height:14px;background:var(--isabella-gota);-webkit-mask:var(--gota-cheia) center/contain no-repeat;mask:var(--gota-cheia) center/contain no-repeat}
+/* credenciais: contorno da gota */
+.cred li::before{content:"";flex:none;width:18px;height:24px;background:var(--isabella-accent);-webkit-mask:var(--gota-linha) center/contain no-repeat;mask:var(--gota-linha) center/contain no-repeat}
+.cred li{grid-template-columns:22px 1fr}
+.cred li::before{grid-row:span 2;margin-top:4px}
+/* serviços: o ícone mora dentro de uma gota, não de um círculo */
+.servicos .item .ic{display:grid;place-items:center;width:52px;height:68px;padding-top:20px;border-radius:0;background:color-mix(in srgb,var(--isabella-accent) 13%,var(--isabella-paper));-webkit-mask:var(--gota-cheia) center/contain no-repeat;mask:var(--gota-cheia) center/contain no-repeat}
+.servicos .item{grid-template-columns:52px 1fr}
+@media (min-width:640px){.servicos .item{grid-template-columns:1fr}}
+/* porque: gota em contorno claro nos três passos */
+.porque .passo::before{content:"";grid-row:span 2;width:20px;height:26px;margin-top:4px;background:var(--isabella-gota-claro);-webkit-mask:var(--gota-linha) center/contain no-repeat;mask:var(--gota-linha) center/contain no-repeat}
+/* passos: o número dentro da gota */
+.etapa{grid-template-columns:48px 1fr}
+.etapa::before{width:46px;height:62px;padding-top:20px;border-radius:0;box-shadow:none;background:var(--isabella-accent);color:var(--isabella-on-accent);font-size:1.3125rem;-webkit-mask:var(--gota-cheia) center/contain no-repeat;mask:var(--gota-cheia) center/contain no-repeat}
+@media (min-width:640px){.etapa{grid-template-columns:1fr}}
+/* chamada final: o fio chega ao símbolo */
+.final .wrap::before{content:"";display:block;width:1.5px;height:56px;margin:-40px auto 14px;background:var(--isabella-on-forest-2)}
+@media (prefers-reduced-motion:reduce){section.sec::before,section.sec::after{transition:none}}
 </style>
 <style>
 /* widget:inicio */
@@ -413,9 +452,9 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
   <div class="wrap">
     <div class="marca">
       <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#142F28" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#C4412B"/></svg>
-      <div><b>Isabella Graça Câmara</b><span>Hematologista · Montes Claros</span></div>
+      <div><b>Dra. Isabella Graça Câmara</b><span>Hematologista em Montes Claros</span></div>
     </div>
-    <button class="btn" type="button" data-wa>Marcar consulta</button>
+    <button class="btn" type="button" data-wa>Agendar</button>
   </div>
 </header>
 
@@ -423,45 +462,33 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 <section class="hero" data-bloco="hero">
   <div class="wrap hero-grid">
     <div class="txt">
-      <div class="topline">
-        <p class="hero-id">Médica Hematologista · CRM-MG 73.571 · RQE 71.765</p>
-        <ul class="chips">
-          <li class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>Residência na UFMG</li>
-          <li class="chip"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Formada na Unimontes</li>
-        </ul>
-      </div>
+      <p class="hero-id">CRM-MG 73.571 · RQE 71.765</p>
+      <ul class="chips">
+        <li class="chip">Residência na UFMG</li>
+        <li class="chip">Formada na Unimontes</li>
+      </ul>
       <h1>Ferritina alterada no exame? Em <span class="mt">uma hora</span>, dá tempo de olhar a sua história e procurar o porquê.</h1>
       <p class="hero-sub">Para quem já tomou ferro e viu a ferritina cair de novo, ou só quer saber se o resultado é normal.</p>
       <div class="hero-acao">
-        <button class="btn" type="button" data-wa data-sticky-alvo><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Marcar consulta pelo WhatsApp</button>
+        <button class="btn" type="button" data-wa data-sticky-alvo>Marcar consulta pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
         <noscript><a class="btn" href="https://wa.me/5538999865405?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20com%20a%20Dra.%20Isabella%20Gra%C3%A7a%20C%C3%A2mara%2C%20hematologista.">Marcar consulta pelo WhatsApp</a></noscript>
         <p class="micro"><span class="hero-micro">Agende pelo WhatsApp em qualquer horário.</span></p>
       </div>
-      <p class="hero-fine">Homens também são atendidos.</p>
     </div>
     <figure class="arco">
       <img src="fotos/isabella-calma.jpg" alt="Dra. Isabella Graça Câmara, de cabelo ondulado castanho-claro e jaleco branco, sorrindo de leve" width="800" height="1000" fetchpriority="high">
       <span class="selo" aria-hidden="true"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#142F28" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#C4412B"/></svg></span>
     </figure>
   </div>
-  <div class="barra" data-bloco="beneficios" role="group" aria-label="Em resumo">
-    <div class="wrap">
-      <ul>
-        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Pedido pelo WhatsApp, a qualquer hora</li>
-        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>Quartas à tarde, na Gastrus</li>
-        <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Uma hora de consulta, particular ou convênio</li>
-      </ul>
-    </div>
-  </div>
 </section>
 
-<section class="reframe" data-bloco="reframe">
-  <div class="wrap grid" data-rv>
-    <h2 class="q">Hematologista é médico de câncer?</h2>
-    <div class="txt">
-      <p class="resp">Não só. E exame alterado tem mais de uma explicação.</p>
-      <p>Hematologia é a especialidade do sangue, e câncer é uma parte dela. Ferritina fora da faixa, anemia e trombose são outra parte, e são o que esta consulta olha. Qual explicação vale para o seu exame só se lê com a sua história ao lado. Se o medo é câncer, diga isso na consulta.</p>
-    </div>
+<section class="fatos" data-bloco="beneficios" aria-label="Por que agendar com a Dra. Isabella">
+  <div class="wrap">
+    <ul>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Pedido pelo WhatsApp, a qualquer hora</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg><span>Quartas à tarde, na Gastrus</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Uma hora de consulta, particular ou convênio</span></li>
+    </ul>
   </div>
 </section>
 
@@ -496,6 +523,42 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
       <h3>Sinal de alerta não espera a consulta</h3>
       <p>Perna inchada e dolorida de um lado só, falta de ar de repente, dor no peito, sangramento que não para ou sangramento na gestação: procure o pronto-atendimento ou ligue 192.</p>
     </div>
+    <div class="acao"><button class="btn" type="button" data-wa>Marcar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button></div>
+  </div>
+</section>
+
+<section class="reframe" data-bloco="reframe">
+  <div class="wrap grid" data-rv>
+    <h2 class="q">Hematologista é médico de câncer?</h2>
+    <div class="txt">
+      <p class="resp">Não só. E exame alterado tem mais de uma explicação.</p>
+      <p>Hematologia é a especialidade do sangue, e câncer é uma parte dela. Ferritina fora da faixa, anemia e trombose são outra parte, e são o que esta consulta olha. Qual explicação vale para o seu exame só se lê com a sua história ao lado. Se o medo é câncer, diga isso na consulta.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec prova" data-bloco="prova">
+  <div class="wrap grid" data-rv>
+    <div class="txt">
+      <h2><span class="pq">Ela acabou de se formar. Posso confiar?</span> Terminou a residência em 2026. Cada registro se confere.</h2>
+      <p class="lead">Ainda não há avaliações públicas. O que existe para conferir é a formação, com datas e registros.</p>
+      <ul class="cred">
+        <li>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <h3>Hematologia na UFMG · RQE <span class="num">71.765</span></h3>
+          <p>Residência em Hematologia e Hemoterapia na Universidade Federal de Minas Gerais, de março de 2024 a fevereiro de 2026.</p>
+        </li>
+        <li>
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <h3>Clínica Médica no HUCF · RQE <span class="num">71.766</span></h3>
+          <p>Residência em Clínica Médica no Hospital Universitário Clemente de Faria, da Unimontes, de março de 2018 a fevereiro de 2020. Antes, graduação em Medicina pela Unimontes.</p>
+        </li>
+      </ul>
+      <p class="nota">Para conferir, busque CRM-MG 73.571 no site do Conselho Regional de Medicina de Minas Gerais.</p>
+    </div>
+    <figure class="arco">
+      <img src="fotos/isabella-ia-microscopio.jpg" alt="Dra. Isabella Graça Câmara de jaleco branco, ao microscópio" width="928" height="1152" loading="lazy">
+    </figure>
   </div>
 </section>
 
@@ -529,31 +592,6 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
   </div>
 </section>
 
-<section class="sec prova" data-bloco="prova">
-  <div class="wrap grid" data-rv>
-    <div class="txt">
-      <h2><span class="pq">Ela acabou de se formar. Posso confiar?</span> Terminou a residência em 2026. Cada registro se confere.</h2>
-      <p class="lead">Ainda não há avaliações públicas. O que existe para conferir é a formação, com datas e registros.</p>
-      <ul class="cred">
-        <li>
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>Hematologia na UFMG · RQE <span class="num">71.765</span></h3>
-          <p>Residência em Hematologia e Hemoterapia na Universidade Federal de Minas Gerais, de março de 2024 a fevereiro de 2026.</p>
-        </li>
-        <li>
-          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
-          <h3>Clínica Médica no HUCF · RQE <span class="num">71.766</span></h3>
-          <p>Residência em Clínica Médica no Hospital Universitário Clemente de Faria, da Unimontes, de março de 2018 a fevereiro de 2020. Antes, graduação em Medicina pela Unimontes.</p>
-        </li>
-      </ul>
-      <p class="nota">Para conferir, busque CRM-MG 73.571 no site do Conselho Regional de Medicina de Minas Gerais.</p>
-    </div>
-    <figure class="arco">
-      <img src="fotos/isabella-ia-microscopio.jpg" alt="Dra. Isabella Graça Câmara de jaleco branco, ao microscópio" width="928" height="1152" loading="lazy">
-    </figure>
-  </div>
-</section>
-
 <section class="sec depois" data-bloco="depois">
   <div class="wrap" data-rv>
     <h2><span class="pq">Se eu mandar mensagem, o que acontece?</span> Três passos, e o primeiro é só uma mensagem.</h2>
@@ -562,7 +600,7 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
       <li class="etapa"><h3>A recepção responde</h3><p>A recepção da Clínica Gastrus manda o próximo horário de quarta e o valor da consulta.</p></li>
       <li class="etapa"><h3>Você vem à consulta</h3><p>Uma hora, na Clínica Gastrus. Leve os seus exames, inclusive os antigos, impressos ou no celular.</p></li>
     </ol>
-    <div class="acao"><button class="btn" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Marcar pelo WhatsApp</button></div>
+    <div class="acao"><button class="btn" type="button" data-wa>Marcar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button></div>
   </div>
 </section>
 
@@ -604,7 +642,7 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
     <svg class="simbolo" viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#F2F5EE" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#F0866C"/></svg>
     <h2>Uma hora para olhar o seu sangue.</h2>
     <p>Escreva para a recepção da Clínica Gastrus. Pode ser só uma pergunta.</p>
-    <button class="btn btn--claro" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Marcar consulta pelo WhatsApp</button>
+    <button class="btn btn--claro" type="button" data-wa>Marcar consulta pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
   </div>
 </section>
 </main>
@@ -621,7 +659,13 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
   </div>
 </footer>
 
-<div class="fixo" data-bloco="cta-flutuante" data-sticky>
+<!-- flutuante (tela larga): fixo em toda a rolagem, como o da ML. Não é bloco, é elemento permanente. -->
+<button class="wafloat" data-bloco="cta-flutuante" data-wa type="button" aria-label="Marcar pelo WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.5c1.8.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3z"/></svg>
+</button>
+
+<!-- barra fixa (celular) -->
+<div class="fixo" data-sticky>
   <button class="btn" type="button" data-wa><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.35.2-.65.05a8.1 8.1 0 0 1-2.4-1.5 9 9 0 0 1-1.65-2.05c-.15-.3 0-.45.15-.6l.45-.5c.15-.2.2-.3.3-.5s0-.4 0-.55-.7-1.65-.95-2.25-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.35a3.6 3.6 0 0 0-1.1 2.65 6.3 6.3 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.85c.75.3 1.35.5 1.8.65.75.25 1.45.2 2 .1.6-.1 1.8-.75 2.05-1.45s.25-1.35.2-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>Marcar pelo WhatsApp</button>
   <noscript><a class="btn" style="display:none" href="https://wa.me/5538999865405?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20com%20a%20Dra.%20Isabella%20Gra%C3%A7a%20C%C3%A2mara%2C%20hematologista.">Marcar pelo WhatsApp</a></noscript>
   <p class="sticky-micro">Agende pelo WhatsApp em qualquer horário.</p>
