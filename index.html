@@ -74,9 +74,6 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 .hero-grid{display:grid;gap:40px}
 .hero .txt{display:grid;gap:14px;align-content:center}
 .hero-id{font-size:.9375rem;line-height:1.45;font-weight:600;color:var(--isabella-ink-2);letter-spacing:.1em;text-transform:uppercase}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:4px 14px 4px 10px;border-radius:999px;background:var(--isabella-surface);box-shadow:inset 0 0 0 1px var(--isabella-hair);font-size:.9375rem;font-weight:500;line-height:1.25;color:var(--isabella-ink)}
-.chip .i{width:18px;height:18px;color:var(--isabella-accent)}
 .hero h1{font-size:clamp(31px,calc(.9rem + 3.6vw),58px);line-height:1.08;letter-spacing:-.012em}
 .mt{background:linear-gradient(transparent 62%,var(--isabella-rosa) 62% 92%,transparent 92%);padding-inline:.04em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .hero-sub{font-size:1.3125rem;line-height:1.5;color:var(--isabella-ink-2);max-width:40ch}
@@ -216,11 +213,9 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
   .hero .txt::before{content:"";position:absolute;z-index:-1;left:-20px;right:-20px;top:-96px;bottom:-22px;background:linear-gradient(180deg,rgba(23,58,48,0) 0,rgba(23,58,48,.88) 84px,var(--isabella-forest) 140px)}
   .hero .selo{display:none}
   .hero .txt{position:relative;z-index:1;gap:12px}
-  .hero h1{color:var(--isabella-on-forest);font-size:clamp(1.75rem,4.3svh,2.25rem);line-height:1.12}
   .hero .hero-id{color:var(--isabella-on-forest-2)}
-  .hero .chip{color:var(--isabella-on-forest)}
-  .hero .chip::before{background:var(--isabella-gota-claro)}
-  .hero-sub{font-size:1.1875rem;color:var(--isabella-on-forest-2)}
+  .hero h1{color:var(--isabella-on-forest);font-size:clamp(1.75rem,4.3svh,2.25rem);line-height:1.12}
+  .hero   .hero   .hero-sub{font-size:1.1875rem;color:var(--isabella-on-forest-2)}
   .hero .mt{background:linear-gradient(transparent 62%,rgba(240,134,108,.45) 62% 92%,transparent 92%)}
   .fixo{display:block}
   button.wafloat{display:none}
@@ -281,8 +276,7 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 
 /* ===== assinatura visual: direção B, o fio da gota (Felipe, 15/11/2026; direcoes/index.html) ===== */
 .arco::before{display:none}
-.chip{background:none;box-shadow:none;border-radius:0;padding:0;min-height:0}
-.chip .i,.cred .i,.passo .i{display:none}
+.cred .i,.passo .i{display:none}
 .item .ic{display:none}
 .item{grid-template-columns:1fr}
 .cred li{grid-template-columns:1fr}
@@ -299,8 +293,6 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
 @media (max-width:879px){.servicos,.prova,.depois,.faq,.local{padding-top:96px}}
 @media (min-width:880px){.local{padding-top:112px}}
 /* credencial do hero: gota no lugar do ícone */
-.chips{gap:6px 18px}
-.chip::before{content:"";flex:none;width:10px;height:14px;background:var(--isabella-gota);-webkit-mask:var(--gota-cheia) center/contain no-repeat;mask:var(--gota-cheia) center/contain no-repeat}
 /* credenciais: contorno da gota */
 .cred li::before{content:"";flex:none;width:18px;height:24px;background:var(--isabella-accent);-webkit-mask:var(--gota-linha) center/contain no-repeat;mask:var(--gota-linha) center/contain no-repeat}
 .cred li{grid-template-columns:22px 1fr}
@@ -450,7 +442,7 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
   <div class="wrap">
     <div class="marca">
       <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#142F28" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#C4412B"/></svg>
-      <div><b>Dra. Isabella Graça Câmara</b><span>Hematologista para mulheres · Montes Claros</span></div>
+      <div><b>Dra. Isabella Graça Câmara</b><span>Hematologia e Clínica Médica · Montes Claros e Online</span></div>
     </div>
     <button class="btn" type="button" data-wa>Agendar</button>
   </div>
@@ -461,10 +453,6 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
   <div class="wrap hero-grid">
     <div class="txt">
       <p class="hero-id">CRM-MG 73.571 · RQE 71.765</p>
-      <ul class="chips">
-        <li class="chip">Residência na UFMG</li>
-        <li class="chip">Hematologia e Clínica Médica</li>
-      </ul>
       <h1>Hematologia para mulheres: cansaço não precisa ser <span class="mt">normal</span></h1>
       <div class="hero-acao">
         <button class="btn" type="button" data-wa data-sticky-alvo>Marcar consulta pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
@@ -479,12 +467,12 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
   </div>
 </section>
 
-<section class="fatos" data-bloco="beneficios" aria-label="Por que agendar com a Dra. Isabella">
+<section class="fatos" data-bloco="beneficios" aria-label="Formação da Dra. Isabella">
   <div class="wrap">
     <ul>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/><path d="M9.5 9a1.8 1.8 0 0 1 3.4.6c0 1.2-1.9 1.4-1.9 2.6"/><path d="M11 14.6h.01"/></svg><span>Procura por que o ferro caiu</span></li>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="8" height="16" rx="1.5"/><rect x="13" y="4" width="8" height="16" rx="1.5"/><path d="M5.5 9h3M5.5 12h3M15.5 9h3M15.5 12h3"/></svg><span>Lê seus exames antigos lado a lado</span></li>
-      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg><span>Sai com o próximo passo definido</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg><span>Residência em Hematologia pela UFMG</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 21l5-3 5 3-1.5-7"/></svg><span>Residência em Clínica Médica pela Unimontes</span></li>
+      <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h6M7 14h4"/></svg><span>Olhar para a saúde da mulher, em todas as fases</span></li>
     </ul>
   </div>
 </section>
