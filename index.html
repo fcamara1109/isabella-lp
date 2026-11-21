@@ -66,7 +66,8 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 .marca{display:flex;align-items:center;gap:12px;min-width:0}
 .marca svg{width:36px;height:36px;flex:none}
 .marca b{display:block;font-family:var(--isabella-display);font-size:1.3125rem;font-weight:560;line-height:1.15;letter-spacing:-.005em}
-.marca span{display:block;font-size:.9375rem;line-height:1.3;color:var(--isabella-ink-2)}
+.marca span,.marca h1{display:block;font-size:.9375rem;line-height:1.3;color:var(--isabella-ink-2)}
+.marca h1{font-family:inherit;font-weight:inherit;letter-spacing:inherit;font-optical-sizing:inherit;text-wrap:inherit}  /* o h1 do header (Profissão · Cidade) tem a cara da linha que era span */
 .topo .btn{display:none;min-height:48px;padding:0 24px;font-size:1rem}
 
 /* ---------- primeira dobra: registro, 2 credenciais, a ponte, o apoio, o botão (ordem da ML) ---------- */
@@ -74,7 +75,7 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
 .hero-grid{display:grid;gap:40px}
 .hero .txt{display:grid;gap:14px;align-content:center}
 .hero-id{font-size:.9375rem;line-height:1.45;font-weight:600;color:var(--isabella-ink-2);letter-spacing:.1em;text-transform:uppercase}
-.hero h1{font-size:clamp(31px,calc(.9rem + 3.6vw),58px);line-height:1.08;letter-spacing:-.012em}
+.hero .hero-titulo{font-size:clamp(31px,calc(.9rem + 3.6vw),58px);line-height:1.08;letter-spacing:-.012em}
 .mt{background:linear-gradient(transparent 62%,var(--isabella-rosa) 62% 92%,transparent 92%);padding-inline:.04em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .hero-sub{font-size:1.3125rem;line-height:1.5;color:var(--isabella-ink-2);max-width:40ch}
 .hero-acao{display:grid;justify-items:start;gap:10px}
@@ -209,7 +210,7 @@ a{color:var(--isabella-accent);text-underline-offset:.18em;text-decoration-thick
   .hero .selo{display:none}
   .hero .txt{position:relative;z-index:1;gap:12px}
   .hero .hero-id{color:var(--isabella-on-forest-2)}
-  .hero h1{color:var(--isabella-on-forest);font-size:clamp(1.75rem,4.3svh,2.25rem);line-height:1.12}
+  .hero .hero-titulo{color:var(--isabella-on-forest);font-size:clamp(1.75rem,4.3svh,2.25rem);line-height:1.12}
   .hero   .hero   .hero-sub{font-size:1.1875rem;color:var(--isabella-on-forest-2)}
   .hero .mt{background:linear-gradient(transparent 62%,rgba(240,134,108,.45) 62% 92%,transparent 92%)}
   .fixo{display:block}
@@ -435,7 +436,7 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
   <div class="wrap">
     <div class="marca">
       <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#142F28" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#C4412B"/></svg>
-      <div><b>Dra. Isabella Graça Câmara</b><span>Hematologia e Clínica Médica · Montes Claros e Online</span></div>
+      <div><b>Dra. Isabella Graça Câmara</b><h1>Hematologista e clínica geral · Montes Claros e Online</h1></div>
     </div>
     <button class="btn" type="button" data-wa>Agendar</button>
   </div>
@@ -446,7 +447,7 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
   <div class="wrap hero-grid">
     <div class="txt">
       <p class="hero-id">CRM-MG 73.571 · RQE 71.765</p>
-      <h1>Saúde da mulher e hematologia andam <span class="mt">juntas</span>.</h1>
+      <h2 class="hero-titulo">Saúde da mulher e hematologia andam <span class="mt">juntas</span>.</h2>
       <div class="hero-acao">
         <button class="btn" type="button" data-wa data-sticky-alvo>Marcar consulta pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
         <noscript><a class="btn" href="https://wa.me/5538999865405?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20queria%20marcar%20uma%20consulta%20com%20a%20Dra.%20Isabella%20Gra%C3%A7a%20C%C3%A2mara%2C%20hematologista.">Marcar consulta pelo WhatsApp</a></noscript>
