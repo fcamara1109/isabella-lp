@@ -304,6 +304,19 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
 /* chamada final: o fio chega ao símbolo */
 .final .wrap::before{content:"";display:block;width:1.5px;height:56px;margin:-40px auto 14px;background:var(--isabella-on-forest-2)}
 @media (prefers-reduced-motion:reduce){section.sec::before,section.sec::after{transition:none}}
+
+/* 21/11/2026 (Felipe): CRM em card irmão dos RQE, fundo levemente diferente */
+.cred li.crm{background:color-mix(in srgb,var(--isabella-accent) 7%,var(--isabella-surface))}
+@media (min-width:880px){.cred li.crm{grid-column:1/-1}}
+/* 21/11/2026 (Felipe): passos do WhatsApp legíveis. Cartões com número em círculo, título em texto de corpo */
+.trilha{gap:14px}
+.etapa{display:flex;align-items:center;gap:18px;padding:20px 22px;background:var(--isabella-surface);border-radius:var(--isabella-r-cartao);box-shadow:var(--isabella-sombra)}
+.etapa:last-child{padding:20px 22px}
+.etapa::before{flex:none;width:44px;height:44px;padding:0;margin:0;border-radius:50%;-webkit-mask:none;mask:none;background:var(--isabella-accent);color:var(--isabella-on-accent);font-family:var(--isabella-body);font-size:1.125rem;font-weight:700;box-shadow:none}
+.etapa::after{display:none!important}
+.etapa h3{padding:0;font-family:var(--isabella-body);font-size:1.1875rem;font-weight:600;line-height:1.4;color:var(--isabella-ink)}
+@media (min-width:880px){.trilha{grid-template-columns:repeat(4,1fr);gap:20px}.etapa,.etapa:last-child{flex-direction:column;align-items:flex-start;gap:16px;padding:26px 24px 28px}.etapa::before{margin:0}}
+
 </style>
 <style>
 /* widget:inicio */
@@ -473,10 +486,10 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
 
 <section class="reframe" data-bloco="reframe">
   <div class="wrap grid" data-rv>
-    <h2 class="q">Te disseram que era normal?</h2>
+    <h2 class="q">Não normalize o cansaço.</h2>
     <div class="txt">
-      <p class="resp">Pode ser comum. Você não precisa se acostumar.</p>
-      <p>Alguém disse que o cansaço era estresse, idade ou gravidez. Às vezes é. Mas quando o ferro cai mais de uma vez, vale perguntar por quê. O que você sente não precisa virar rotina. Pode trazer para a consulta, com as palavras que quiser.</p>
+      <p class="resp">Pode ser comum, mas você não precisa se acostumar a isso. Você merece mais.</p>
+      <p>Alguém disse que o cansaço era estresse, idade ou gravidez. Às vezes é. Mas quando o ferro cai mais de uma vez, vale perguntar por quê. Pode trazer para a consulta, com as palavras que quiser.</p>
     </div>
   </div>
 </section>
@@ -509,7 +522,7 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
       <div class="item">
         <span class="ic"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></span>
         <h3>Hematologia oncológica</h3>
-        <p>Leucemia, linfoma e mieloma são cânceres do sangue. A Dra. Isabella atende quem está investigando e quem já tem o diagnóstico.</p>
+        <p>Leucemia, linfoma e mieloma são cânceres do sangue. Pedem cuidado especializado e acompanhamento de perto, com clareza em cada etapa.</p>
       </div>
     </div>
     <div class="acao"><button class="btn" type="button" data-wa>Marcar pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button></div>
@@ -532,8 +545,12 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
           <h3>Clínica Médica · RQE <span class="num">71.766</span></h3>
           <p>Residência no Hospital Universitário Clemente de Faria, de 2018 a 2020. Graduação em Medicina pela Unimontes.</p>
         </li>
+        <li class="crm">
+          <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+          <h3>CRM-MG <span class="num">73.571</span></h3>
+          <p>Confira no site do Conselho Regional de Medicina de Minas Gerais.</p>
+        </li>
       </ul>
-      <p class="nota">CRM-MG 73.571: confira no site do Conselho Regional de Medicina de Minas Gerais.</p>
     </div>
     <figure class="arco">
       <img src="fotos/isabella-ia-microscopio.jpg" alt="Dra. Isabella Graça Câmara de jaleco branco, ao microscópio" width="928" height="1152" loading="lazy">
@@ -574,16 +591,14 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
 <section class="sec faq" data-bloco="faq">
   <div class="wrap grid" data-rv>
     <div class="cab">
-      <h2><span class="pq">Ficou alguma dúvida?</span> Seis respostas antes de você escrever.</h2>
-      <div class="acao"><button class="btn btn--fino" type="button" data-wa>Marcar pelo WhatsApp</button></div>
+      <h2><span class="pq">Ficou alguma dúvida?</span> Respostas rápidas antes de você escrever.</h2>
     </div>
     <div class="perguntas">
-      <details name="faq"><summary>Quanto custa? Aceita convênio?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Atende particular e convênio. Qual é o seu plano, o valor e os horários livres, você confirma na conversa pelo WhatsApp.</p></details>
+      <details name="faq"><summary>Quanto custa? Aceita convênio?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Atende particular e convênio. Pelo WhatsApp, você confirma o seu plano, o valor e os horários.</p></details>
       <details name="faq"><summary>Ela atende homem?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Sim. A consulta é a mesma para homens e mulheres.</p></details>
-      <details name="faq"><summary>Posso mandar o meu exame pelo WhatsApp para ela ver?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Não. O exame se lê na consulta, junto com a sua história. Pelo WhatsApp, você marca o horário e tira as dúvidas sobre a consulta.</p></details>
       <details name="faq"><summary>Preciso levar exames? E se forem antigos?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Leve todos os que tiver. Com os antigos, dá para comparar com o último.</p></details>
       <details name="faq"><summary>Meu médico já receitou ferro. Ainda faz sentido marcar?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Faz, se o ferro caiu de novo ou se a dúvida continua. Leve a receita e os exames que ele pediu: a consulta parte daí, e o seu médico segue acompanhando você.</p></details>
-      <details name="faq"><summary>Hematologista é médico de câncer?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Não só. Hematologia é a especialidade do sangue: ferro baixo, ferritina alta, anemia, trombose e também o câncer do sangue. A Dra. Isabella atende todos eles.</p></details>
+      <details name="faq"><summary>Hematologista é médico de câncer?<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Não só. Hematologia cuida do sangue como um todo: ferro baixo, ferritina alta, anemia, trombose e também o câncer do sangue.</p></details>
     </div>
   </div>
 </section>
@@ -591,7 +606,7 @@ section.sec:not(.final)::after{content:"";position:absolute;top:44px;left:calc(v
 <section class="sec final" data-bloco="cta-final">
   <div class="wrap" data-rv>
     <svg class="simbolo" viewBox="0 0 100 100" aria-hidden="true"><path d="M50.00 6.50C56.00 19.40 80.00 40.40 80.00 62.00A30.00 30.00 0 0 1 20.00 62.00C20.00 40.40 44.00 19.40 50.00 6.50Z" fill="none" stroke="#F2F5EE" stroke-width="7" stroke-linejoin="round"/><path d="M50.00 46.88C52.50 52.25 62.50 61.00 62.50 70.00A12.50 12.50 0 0 1 37.50 70.00C37.50 61.00 47.50 52.25 50.00 46.88Z" fill="#F0866C"/></svg>
-    <h2>Traga os seus exames. A Dra. Isabella procura o porquê junto com você.</h2>
+    <h2>Traga os seus exames. Vejo com você o que eles significam.</h2>
     <p>Uma mensagem no WhatsApp basta para começar.</p>
     <button class="btn btn--claro" type="button" data-wa>Marcar consulta pelo WhatsApp <svg class="seta" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
   </div>
